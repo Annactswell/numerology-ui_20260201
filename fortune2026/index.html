@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026运势解析 - 灵魂旅迹</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <!-- ========== 顶部导航 ========== -->
+    <header class="header">
+        <div class="back-btn" onclick="history.back()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </div>
+        <div class="header-title">2026运势解析</div>
+        <div class="header-actions">
+            <div class="action-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="18" cy="5" r="3"/>
+                    <circle cx="6" cy="12" r="3"/>
+                    <circle cx="18" cy="19" r="3"/>
+                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== 年份主视觉 ========== -->
+    <div class="hero-section">
+        <div class="year-display">
+            <span class="year-prefix">丙午年</span>
+            <span class="year-number">2026</span>
+        </div>
+        <div class="fortune-summary">
+            <div class="fortune-stars">
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star">★</span>
+            </div>
+            <p class="fortune-text">整体运势良好，把握机遇年</p>
+        </div>
+    </div>
+
+    <!-- ========== 四维运势 ========== -->
+    <div class="fortune-grid">
+        <div class="fortune-card">
+            <div class="card-icon career">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="2" y="7" width="20" height="14" rx="2"/>
+                    <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+                    <line x1="12" y1="12" x2="12" y2="12.01"/>
+                </svg>
+            </div>
+            <div class="card-content">
+                <h3>事业运</h3>
+                <div class="card-stars">★★★★☆</div>
+                <p>贵人相助，适合拓展</p>
+            </div>
+        </div>
+        <div class="fortune-card">
+            <div class="card-icon wealth">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 6v12"/>
+                    <path d="M8 10h8"/>
+                    <path d="M8 14h8"/>
+                </svg>
+            </div>
+            <div class="card-content">
+                <h3>财运</h3>
+                <div class="card-stars">★★★★★</div>
+                <p>正财稳健，偏财可期</p>
+            </div>
+        </div>
+        <div class="fortune-card">
+            <div class="card-icon love">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+            </div>
+            <div class="card-content">
+                <h3>感情运</h3>
+                <div class="card-stars">★★★☆☆</div>
+                <p>下半年桃花旺盛</p>
+            </div>
+        </div>
+        <div class="fortune-card">
+            <div class="card-icon study">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                </svg>
+            </div>
+            <div class="card-content">
+                <h3>学业运</h3>
+                <div class="card-stars">★★★★☆</div>
+                <p>文昌星照，考试顺利</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== 月度运势曲线 ========== -->
+    <div class="chart-section">
+        <div class="section-header">
+            <div class="section-title">月度运势走向</div>
+        </div>
+        <div class="chart-container">
+            <svg class="fortune-chart" viewBox="0 0 350 120">
+                <!-- 网格线 -->
+                <line x1="30" y1="20" x2="330" y2="20" stroke="#eee" stroke-width="1"/>
+                <line x1="30" y1="50" x2="330" y2="50" stroke="#eee" stroke-width="1"/>
+                <line x1="30" y1="80" x2="330" y2="80" stroke="#eee" stroke-width="1"/>
+                
+                <!-- 曲线 -->
+                <path d="M30,60 Q55,40 80,45 T130,35 T180,50 T230,30 T280,40 T330,25" 
+                      fill="none" stroke="#000" stroke-width="2"/>
+                
+                <!-- 数据点 -->
+                <circle cx="30" cy="60" r="4" fill="#000"/>
+                <circle cx="80" cy="45" r="4" fill="#000"/>
+                <circle cx="130" cy="35" r="4" fill="#000"/>
+                <circle cx="180" cy="50" r="4" fill="#000"/>
+                <circle cx="230" cy="30" r="4" fill="#000"/>
+                <circle cx="280" cy="40" r="4" fill="#000"/>
+                <circle cx="330" cy="25" r="4" fill="#000"/>
+            </svg>
+            <div class="chart-labels">
+                <span>1月</span>
+                <span>3月</span>
+                <span>5月</span>
+                <span>7月</span>
+                <span>9月</span>
+                <span>11月</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== 开运建议 ========== -->
+    <div class="tips-section">
+        <div class="section-header">
+            <div class="section-title">开运建议</div>
+        </div>
+        <div class="tips-list">
+            <div class="tip-item">
+                <div class="tip-label">幸运颜色</div>
+                <div class="tip-value">
+                    <span class="color-dot" style="background: #e53935;"></span>
+                    <span class="color-dot" style="background: #ffd700;"></span>
+                    <span class="color-dot" style="background: #4caf50;"></span>
+                    <span>红色 · 金色 · 绿色</span>
+                </div>
+            </div>
+            <div class="tip-item">
+                <div class="tip-label">幸运数字</div>
+                <div class="tip-value">3 · 6 · 8</div>
+            </div>
+            <div class="tip-item">
+                <div class="tip-label">幸运方位</div>
+                <div class="tip-value">东南 · 正北</div>
+            </div>
+            <div class="tip-item">
+                <div class="tip-label">贵人生肖</div>
+                <div class="tip-value">虎 · 马 · 狗</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== 获取详细报告 ========== -->
+    <div class="cta-section">
+        <div class="cta-card">
+            <div class="cta-info">
+                <h3>获取完整2026运势报告</h3>
+                <p>含每月详解、吉凶日历、化解方案</p>
+            </div>
+            <div class="cta-action">
+                <div class="cta-price">
+                    <span class="price-current">¥19.9</span>
+                    <span class="price-original">¥59.9</span>
+                </div>
+                <button class="cta-btn" onclick="handleGetReport()">立即获取</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

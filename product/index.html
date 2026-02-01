@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品详情 - 灵魂旅迹</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <!-- ========== 顶部导航 ========== -->
+    <header class="header">
+        <div class="back-btn" onclick="history.back()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </div>
+        <div class="header-title">商品详情</div>
+        <div class="header-actions">
+            <div class="action-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="18" cy="5" r="3"/>
+                    <circle cx="6" cy="12" r="3"/>
+                    <circle cx="18" cy="19" r="3"/>
+                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                </svg>
+            </div>
+            <div class="action-btn" onclick="location.href='../shop/index.html'">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                <span class="cart-badge">3</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== 商品图片轮播 ========== -->
+    <div class="gallery-section">
+        <div class="gallery-container" id="gallery">
+            <div class="gallery-slide active">
+                <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800&h=800&fit=crop&auto=format" alt="商品图1">
+            </div>
+            <div class="gallery-slide">
+                <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800&h=800&fit=crop&auto=format&sat=-100" alt="商品图2">
+            </div>
+            <div class="gallery-slide">
+                <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800&h=800&fit=crop&auto=format&blur=50" alt="商品图3">
+            </div>
+        </div>
+        <div class="gallery-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+        </div>
+        <!-- 商品标签 -->
+        <div class="product-badges">
+            <span class="badge">热销</span>
+            <span class="badge outline">正品保证</span>
+        </div>
+    </div>
+
+    <!-- ========== 商品基本信息 ========== -->
+    <div class="product-info">
+        <div class="price-row">
+            <div class="price-current">
+                <span class="price-symbol">¥</span>
+                <span class="price-value">688</span>
+            </div>
+            <div class="price-original">¥1288</div>
+            <div class="price-discount">5.3折</div>
+        </div>
+        
+        <h1 class="product-title">天然和田玉平安扣吊坠</h1>
+        <p class="product-subtitle">新疆和田玉籽料 · 手工雕刻 · 附鉴定证书</p>
+        
+        <div class="product-stats">
+            <div class="stat-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+                <span>1.2k 收藏</span>
+            </div>
+            <div class="stat-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+                <span>328 评价</span>
+            </div>
+            <div class="stat-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="1" y="3" width="15" height="13"/>
+                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                    <circle cx="5.5" cy="18.5" r="2.5"/>
+                    <circle cx="18.5" cy="18.5" r="2.5"/>
+                </svg>
+                <span>包邮</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ========== 规格选择 ========== -->
+    <div class="spec-section">
+        <div class="section-header">
+            <span class="section-label">规格</span>
+            <span class="section-value">请选择 尺寸/链绳</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="1.5">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ========== 开运寓意 ========== -->
+    <div class="meaning-section">
+        <div class="meaning-header">
+            <svg class="meaning-icon" viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="20" fill="none" stroke="#333" stroke-width="1.5"/>
+                <path d="M24,4 A20,20 0 0,1 24,44 A10,10 0 0,1 24,24 A10,10 0 0,0 24,4" fill="#333"/>
+                <circle cx="24" cy="14" r="2.5" fill="#fff"/>
+                <circle cx="24" cy="34" r="2.5" fill="#333"/>
+            </svg>
+            <div class="meaning-title">开运寓意</div>
+        </div>
+        <div class="meaning-content">
+            <div class="meaning-item">
+                <div class="meaning-name">平安扣</div>
+                <div class="meaning-desc">又称怀古，寓意平安、圆满、和谐。外圈代表辽阔天地，内圈代表内心平静。</div>
+            </div>
+            <div class="meaning-tags">
+                <span class="tag">保平安</span>
+                <span class="tag">护身符</span>
+                <span class="tag">招财</span>
+                <span class="tag">辟邪</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ========== 商品详情 ========== -->
+    <div class="detail-section">
+        <div class="section-title-bar">
+            <div class="title-line"></div>
+            <span class="title-text">商品详情</span>
+            <div class="title-line"></div>
+        </div>
+
+        <!-- 参数表格 -->
+        <div class="params-table">
+            <div class="param-row">
+                <span class="param-label">材质</span>
+                <span class="param-value">新疆和田玉籽料</span>
+            </div>
+            <div class="param-row">
+                <span class="param-label">工艺</span>
+                <span class="param-value">手工雕刻</span>
+            </div>
+            <div class="param-row">
+                <span class="param-label">尺寸</span>
+                <span class="param-value">直径约 25-30mm</span>
+            </div>
+            <div class="param-row">
+                <span class="param-label">重量</span>
+                <span class="param-value">约 15-20g</span>
+            </div>
+            <div class="param-row">
+                <span class="param-label">链绳</span>
+                <span class="param-value">可选红绳/黑绳/银链</span>
+            </div>
+            <div class="param-row">
+                <span class="param-label">证书</span>
+                <span class="param-value">附国家鉴定证书</span>
+            </div>
+        </div>
+
+        <!-- 详情图片 -->
+        <div class="detail-images">
+            <div class="detail-image">
+                <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=800&auto=format" alt="详情图1">
+            </div>
+            <div class="detail-text">
+                <h3>天然和田玉 · 温润如脂</h3>
+                <p>精选新疆和田玉籽料，玉质细腻温润，油脂光泽。每一块玉石都经过严格筛选，确保品质上乘。</p>
+            </div>
+            <div class="detail-image">
+                <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=800&auto=format" alt="详情图2">
+            </div>
+            <div class="detail-text">
+                <h3>匠心手工 · 精雕细琢</h3>
+                <p>由经验丰富的玉雕师傅手工雕刻，每一件作品都独一无二。平安扣造型圆润饱满，线条流畅自然。</p>
+            </div>
+            <div class="detail-image">
+                <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=800&auto=format" alt="详情图3">
+            </div>
+            <div class="detail-text">
+                <h3>精美包装 · 送礼佳选</h3>
+                <p>高档礼盒包装，附国家权威鉴定证书。无论是自戴还是送人，都是传递祝福的最佳选择。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== 用户评价 ========== -->
+    <div class="reviews-section">
+        <div class="section-title-bar">
+            <div class="title-line"></div>
+            <span class="title-text">用户评价 (328)</span>
+            <div class="title-line"></div>
+        </div>
+
+        <div class="reviews-list">
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="reviewer-avatar">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&auto=format" alt="头像">
+                    </div>
+                    <div class="reviewer-info">
+                        <div class="reviewer-name">月***光</div>
+                        <div class="review-meta">2026-01-28 · 尺寸：30mm / 红绳</div>
+                    </div>
+                </div>
+                <div class="review-content">
+                    玉质很温润，比想象中的还要好！包装也很精美，准备送给妈妈当生日礼物。店家还附了开光证明，很贴心。
+                </div>
+                <div class="review-images">
+                    <div class="review-img">
+                        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=200&h=200&fit=crop&auto=format" alt="评价图">
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="reviewer-avatar">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&auto=format" alt="头像">
+                    </div>
+                    <div class="reviewer-info">
+                        <div class="reviewer-name">风***云</div>
+                        <div class="review-meta">2026-01-25 · 尺寸：25mm / 银链</div>
+                    </div>
+                </div>
+                <div class="review-content">
+                    第二次购买了，上次买给自己，这次买给老公。玉的品质一如既往的好，值得推荐！
+                </div>
+            </div>
+        </div>
+
+        <div class="view-more-btn">
+            查看全部 328 条评价
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- ========== 店铺信息 ========== -->
+    <div class="shop-section">
+        <div class="shop-card">
+            <div class="shop-avatar">
+                <svg width="28" height="28" viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="20" fill="none" stroke="#333" stroke-width="1.5"/>
+                    <path d="M24,4 A20,20 0 0,1 24,44 A10,10 0 0,1 24,24 A10,10 0 0,0 24,4" fill="#333"/>
+                    <circle cx="24" cy="14" r="2.5" fill="#fff"/>
+                    <circle cx="24" cy="34" r="2.5" fill="#333"/>
+                </svg>
+            </div>
+            <div class="shop-info">
+                <div class="shop-name">灵魂旅迹官方店</div>
+                <div class="shop-stats">
+                    <span>商品 126</span>
+                    <span>·</span>
+                    <span>粉丝 8.6万</span>
+                </div>
+            </div>
+            <div class="shop-btn" onclick="location.href='../shop/index.html'">进店</div>
+        </div>
+    </div>
+
+    <!-- ========== 底部购买栏 ========== -->
+    <div class="bottom-bar">
+        <div class="bottom-actions">
+            <div class="action-item">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+                <span>收藏</span>
+            </div>
+            <div class="action-item">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+                <span>客服</span>
+            </div>
+        </div>
+        <div class="bottom-buttons">
+            <button class="btn-cart">加入购物车</button>
+            <button class="btn-buy">立即购买</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

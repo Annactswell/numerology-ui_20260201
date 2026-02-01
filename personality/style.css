@@ -1,0 +1,297 @@
+:root {
+    --bg-color: #ffffff;
+    --text-main: #000000;
+    --text-sub: #555555;
+    --text-hint: #999999;
+    --accent-black: #0a0a0a;
+    --gray-light: #f5f5f5;
+    --gray-medium: #e8e8e8;
+    --border-color: #eee;
+    --serif-font: "Songti SC", "SimSun", "Times New Roman", serif;
+    --sans-font: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--sans-font);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 430px;
+    background-color: var(--bg-color);
+    position: relative;
+    padding-bottom: 40px;
+}
+
+/* ========== 顶部导航 ========== */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    background: var(--bg-color);
+    z-index: 100;
+}
+
+.back-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: -8px;
+}
+
+.header-title {
+    flex: 1;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.header-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.action-btn {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* ========== 主视觉 ========== */
+.hero-section {
+    padding: 32px 24px;
+    text-align: center;
+    background: var(--gray-light);
+}
+
+.hero-visual {
+    margin-bottom: 24px;
+}
+
+.personality-chart {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: var(--serif-font);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.hero-desc {
+    font-size: 14px;
+    color: var(--text-sub);
+}
+
+/* ========== 通用区块 ========== */
+.section-header {
+    margin-bottom: 16px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: var(--serif-font);
+}
+
+/* ========== 五维人格 ========== */
+.dimensions-section {
+    padding: 24px;
+}
+
+.dimension-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dimension-item {
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dimension-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.dimension-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.dimension-name {
+    font-size: 15px;
+    font-weight: 600;
+    font-family: var(--serif-font);
+}
+
+.dimension-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.dimension-bar {
+    height: 6px;
+    background: var(--gray-medium);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.dimension-fill {
+    height: 100%;
+    background: var(--accent-black);
+    border-radius: 3px;
+    transition: width 0.6s ease;
+}
+
+.dimension-desc {
+    font-size: 13px;
+    color: var(--text-hint);
+}
+
+/* ========== 核心特质 ========== */
+.traits-section {
+    padding: 24px;
+    border-top: 8px solid var(--gray-light);
+}
+
+.traits-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.trait-tag {
+    padding: 8px 16px;
+    background: var(--gray-light);
+    border-radius: 20px;
+    font-size: 13px;
+    color: var(--text-main);
+}
+
+/* ========== 人格解读 ========== */
+.reading-section {
+    padding: 24px;
+    border-top: 8px solid var(--gray-light);
+}
+
+.reading-card {
+    display: flex;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.reading-card:last-child {
+    border-bottom: none;
+}
+
+.reading-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--gray-light);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.reading-content h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.reading-content p {
+    font-size: 13px;
+    color: var(--text-sub);
+    line-height: 1.6;
+}
+
+/* ========== CTA区域 ========== */
+.cta-section {
+    padding: 24px;
+    border-top: 8px solid var(--gray-light);
+}
+
+.cta-card {
+    background: var(--accent-black);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cta-content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+.cta-content p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 8px;
+}
+
+.cta-price {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.cta-price .price-current {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffd700;
+}
+
+.cta-price .price-original {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    text-decoration: line-through;
+}
+
+.cta-btn {
+    background: #fff;
+    color: var(--accent-black);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    flex-shrink: 0;
+}

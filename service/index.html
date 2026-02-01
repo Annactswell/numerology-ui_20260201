@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>八字详批报告 - 灵魂旅迹</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <!-- ========== 顶部导航 ========== -->
+    <header class="header">
+        <div class="back-btn" onclick="history.back()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </div>
+        <div class="header-title">服务详情</div>
+        <div class="header-actions">
+            <div class="action-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="18" cy="5" r="3"/>
+                    <circle cx="6" cy="12" r="3"/>
+                    <circle cx="18" cy="19" r="3"/>
+                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                </svg>
+            </div>
+            <div class="action-btn" onclick="location.href='../shop/index.html'">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== 服务主视觉 ========== -->
+    <div class="service-hero">
+        <div class="hero-bg">
+            <svg class="hero-taiji" viewBox="0 0 200 200">
+                <circle cx="100" cy="100" r="95" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+                <path d="M100,5 A95,95 0 0,1 100,195 A47.5,47.5 0 0,1 100,100 A47.5,47.5 0 0,0 100,5" fill="rgba(255,255,255,0.2)"/>
+                <circle cx="100" cy="52.5" r="12" fill="rgba(0,0,0,0.3)"/>
+                <circle cx="100" cy="147.5" r="12" fill="rgba(255,255,255,0.3)"/>
+            </svg>
+            <!-- 八卦符号装饰 -->
+            <div class="bagua-deco bagua-1">☰</div>
+            <div class="bagua-deco bagua-2">☷</div>
+            <div class="bagua-deco bagua-3">☳</div>
+            <div class="bagua-deco bagua-4">☴</div>
+        </div>
+        <div class="hero-content">
+            <div class="service-badge">专业命理师手工批算</div>
+            <h1 class="service-title">八字详批报告</h1>
+            <p class="service-slogan">洞察命盘玄机，指引人生方向</p>
+        </div>
+    </div>
+
+    <!-- ========== 价格信息 ========== -->
+    <div class="price-section">
+        <div class="price-main">
+            <span class="price-currency">¥</span>
+            <span class="price-value">299</span>
+            <span class="price-original">¥599</span>
+            <span class="price-discount">5折</span>
+        </div>
+        <div class="price-info">
+            <span class="sold-count">已售 2,386 份</span>
+            <span class="rating">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                4.9分
+            </span>
+        </div>
+    </div>
+
+    <!-- ========== 服务版本选择 ========== -->
+    <div class="versions-section">
+        <div class="section-label">选择版本</div>
+        <div class="version-options">
+            <div class="version-card active">
+                <div class="version-name">标准版</div>
+                <div class="version-price">¥299</div>
+                <div class="version-desc">八字解析 + 运势分析</div>
+            </div>
+            <div class="version-card">
+                <div class="version-tag">推荐</div>
+                <div class="version-name">专业版</div>
+                <div class="version-price">¥599</div>
+                <div class="version-desc">含流年大运 + 专属建议</div>
+            </div>
+            <div class="version-card">
+                <div class="version-tag">尊享</div>
+                <div class="version-name">大师版</div>
+                <div class="version-price">¥1299</div>
+                <div class="version-desc">一对一咨询 + 终身指导</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ========== 报告内容 ========== -->
+    <section class="content-section">
+        <div class="section-header">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <line x1="3" y1="9" x2="21" y2="9"/>
+                <line x1="9" y1="21" x2="9" y2="9"/>
+            </svg>
+            <span>报告内容</span>
+        </div>
+        
+        <div class="content-grid">
+            <div class="content-item">
+                <div class="content-icon">
+                    <svg viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="20" fill="none" stroke="#333" stroke-width="1.5"/>
+                        <path d="M24,4 A20,20 0 0,1 24,44 A10,10 0 0,1 24,24 A10,10 0 0,0 24,4" fill="#333"/>
+                        <circle cx="24" cy="14" r="2.5" fill="#fff"/>
+                        <circle cx="24" cy="34" r="2.5" fill="#333"/>
+                    </svg>
+                </div>
+                <div class="content-title">命盘解读</div>
+                <div class="content-desc">天干地支、五行属性深度分析</div>
+            </div>
+            <div class="content-item">
+                <div class="content-icon">
+                    <svg viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="18" fill="none" stroke="#333" stroke-width="1.5"/>
+                        <circle cx="24" cy="24" r="6" fill="none" stroke="#333" stroke-width="1.5"/>
+                        <line x1="24" y1="6" x2="24" y2="12" stroke="#333" stroke-width="1.5"/>
+                        <line x1="24" y1="36" x2="24" y2="42" stroke="#333" stroke-width="1.5"/>
+                        <line x1="6" y1="24" x2="12" y2="24" stroke="#333" stroke-width="1.5"/>
+                        <line x1="36" y1="24" x2="42" y2="24" stroke="#333" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <div class="content-title">性格特质</div>
+                <div class="content-desc">先天禀赋与后天潜能解析</div>
+            </div>
+            <div class="content-item">
+                <div class="content-icon">
+                    <svg viewBox="0 0 48 48">
+                        <path d="M12 8h24v32H12z" fill="none" stroke="#333" stroke-width="1.5"/>
+                        <line x1="18" y1="16" x2="30" y2="16" stroke="#333" stroke-width="1.5"/>
+                        <line x1="18" y1="24" x2="30" y2="24" stroke="#333" stroke-width="1.5"/>
+                        <line x1="18" y1="32" x2="26" y2="32" stroke="#333" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <div class="content-title">事业财运</div>
+                <div class="content-desc">职业发展方向与财富机遇</div>
+            </div>
+            <div class="content-item">
+                <div class="content-icon">
+                    <svg viewBox="0 0 48 48">
+                        <path d="M24 8C28 8 32 12 32 18C32 24 24 32 24 32C24 32 16 24 16 18C16 12 20 8 24 8Z" fill="none" stroke="#333" stroke-width="1.5"/>
+                        <path d="M24 40C28 40 32 36 32 30C32 24 24 16 24 16C24 16 16 24 16 30C16 36 20 40 24 40Z" fill="none" stroke="#333" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <div class="content-title">姻缘感情</div>
+                <div class="content-desc">婚恋运势与配偶特征</div>
+            </div>
+            <div class="content-item">
+                <div class="content-icon">
+                    <svg viewBox="0 0 48 48">
+                        <circle cx="24" cy="18" r="8" fill="none" stroke="#333" stroke-width="1.5"/>
+                        <path d="M10 40c0-8 6-14 14-14s14 6 14 14" fill="none" stroke="#333" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <div class="content-title">健康运势</div>
+                <div class="content-desc">身体健康与养生调理建议</div>
+            </div>
+            <div class="content-item">
+                <div class="content-icon">
+                    <svg viewBox="0 0 48 48">
+                        <path d="M24 6l18 12v24H6V18z" fill="none" stroke="#333" stroke-width="1.5"/>
+                        <rect x="18" y="28" width="12" height="14" fill="none" stroke="#333" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <div class="content-title">流年运势</div>
+                <div class="content-desc">当年运势走向与开运指南</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ========== 服务流程 ========== -->
+    <section class="process-section">
+        <div class="section-header">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12,6 12,12 16,14"/>
+            </svg>
+            <span>服务流程</span>
+        </div>
+        
+        <div class="process-timeline">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-title">填写信息</div>
+                    <div class="step-desc">提供准确的出生年月日时</div>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">命理分析</div>
+                    <div class="step-desc">专业命理师手工排盘批算</div>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-title">报告生成</div>
+                    <div class="step-desc">3个工作日内完成详细报告</div>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <div class="step-title">在线查阅</div>
+                    <div class="step-desc">永久保存，随时查看</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ========== 命理师介绍 ========== -->
+    <section class="master-section">
+        <div class="section-header">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="8" r="4"/>
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            </svg>
+            <span>命理师团队</span>
+        </div>
+        
+        <div class="master-card">
+            <div class="master-avatar">
+                <svg viewBox="0 0 80 80">
+                    <circle cx="40" cy="40" r="38" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
+                    <circle cx="40" cy="32" r="12" fill="none" stroke="#333" stroke-width="1"/>
+                    <path d="M18 68c0-12 10-20 22-20s22 8 22 20" fill="none" stroke="#333" stroke-width="1"/>
+                </svg>
+            </div>
+            <div class="master-info">
+                <div class="master-name">玄清居士</div>
+                <div class="master-title">首席命理顾问</div>
+                <div class="master-exp">从业25年 · 服务客户10万+</div>
+            </div>
+            <div class="master-badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                认证
+            </div>
+        </div>
+        
+        <div class="master-intro">
+            师承易学名家，精研四柱八字、紫微斗数二十余年，秉持"明理而不迷信"之理念，以传统命理智慧结合现代心理学，帮助数万人找到人生方向。
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ========== 用户评价 ========== -->
+    <section class="reviews-section">
+        <div class="section-header">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+            <span>用户评价</span>
+            <span class="review-count">2,386条</span>
+        </div>
+        
+        <div class="reviews-list">
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="reviewer-avatar">林</div>
+                    <div class="reviewer-info">
+                        <div class="reviewer-name">林女士</div>
+                        <div class="review-version">购买：专业版</div>
+                    </div>
+                    <div class="review-stars">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                </div>
+                <div class="review-content">
+                    报告分析得非常准确！对我的性格特点和职业发展方向都说得很到位，特别是提到的一些注意事项，感觉确实应该重视。物超所值！
+                </div>
+                <div class="review-time">2026-01-28</div>
+            </div>
+            
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="reviewer-avatar">陈</div>
+                    <div class="reviewer-info">
+                        <div class="reviewer-name">陈先生</div>
+                        <div class="review-version">购买：标准版</div>
+                    </div>
+                    <div class="review-stars">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                </div>
+                <div class="review-content">
+                    作为理工科出身，一开始是抱着试试看的心态。结果报告里分析的内容确实和我过去的经历吻合，对今年的运势预测也有参考价值。
+                </div>
+                <div class="review-time">2026-01-25</div>
+            </div>
+            
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="reviewer-avatar">王</div>
+                    <div class="reviewer-info">
+                        <div class="reviewer-name">王女士</div>
+                        <div class="review-version">购买：大师版</div>
+                    </div>
+                    <div class="review-stars">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                </div>
+                <div class="review-content">
+                    大师版的一对一咨询太值了！玄清老师非常耐心地解答了我所有的疑问，还针对我的情况给出了具体的化解方法。已经推荐给身边的朋友了。
+                </div>
+                <div class="review-time">2026-01-20</div>
+            </div>
+        </div>
+        
+        <div class="view-more">查看全部评价 →</div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ========== 常见问题 ========== -->
+    <section class="faq-section">
+        <div class="section-header">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            <span>常见问题</span>
+        </div>
+        
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>出生时间不精确怎么办？</span>
+                    <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    建议尽量提供准确的出生时辰。如确实不知道精确时间，可提供大概的时间范围，命理师会通过事件推命的方式进行校正。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>报告多久能收到？</span>
+                    <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    标准版和专业版通常在3个工作日内完成；大师版因包含一对一咨询，需预约时间，一般5个工作日内完成。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>报告可以永久保存吗？</span>
+                    <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    是的，您购买的报告会永久保存在您的账户中，可以随时查阅。同时支持导出PDF格式，方便离线保存。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>不满意可以退款吗？</span>
+                    <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    我们承诺如果您对报告质量不满意，可在收到报告后7天内申请全额退款，无需任何理由。
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 服务保障 ========== -->
+    <section class="guarantee-section">
+        <div class="guarantee-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <polyline points="9,12 11,14 15,10"/>
+            </svg>
+            <span>隐私保护</span>
+        </div>
+        <div class="guarantee-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12,6 12,12 16,14"/>
+            </svg>
+            <span>准时交付</span>
+        </div>
+        <div class="guarantee-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9,22 9,12 15,12 15,22"/>
+            </svg>
+            <span>专业服务</span>
+        </div>
+        <div class="guarantee-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                <line x1="1" y1="10" x2="23" y2="10"/>
+            </svg>
+            <span>无忧退款</span>
+        </div>
+    </section>
+
+    <!-- 占位，防止被底部栏遮挡 -->
+    <div style="height: 100px;"></div>
+
+    <!-- ========== 底部购买栏 ========== -->
+    <div class="bottom-bar">
+        <div class="bottom-actions">
+            <div class="action-item" onclick="toggleCollect(this)">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+                <span>收藏</span>
+            </div>
+            <div class="action-item">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+                <span>咨询</span>
+            </div>
+        </div>
+        <div class="bottom-buttons">
+            <button class="btn-buy" onclick="buyNow()">立即购买 ¥299</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

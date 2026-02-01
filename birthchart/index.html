@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生辰八字 - 灵魂旅迹</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <!-- 顶部导航 -->
+    <header class="header">
+        <div class="back-btn" onclick="history.back()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </div>
+        <div class="header-title">生辰八字</div>
+        <div class="header-right"></div>
+    </header>
+
+    <!-- 主内容 -->
+    <main class="main-content">
+        <!-- 页面介绍 -->
+        <div class="page-intro">
+            <!-- 装饰性八卦图案 -->
+            <svg class="deco-illustration" viewBox="0 0 100 100">
+                <!-- 外圆 -->
+                <circle cx="50" cy="50" r="48" fill="none" stroke="#e0e0e0" stroke-width="1"/>
+                <circle cx="50" cy="50" r="42" fill="none" stroke="#e0e0e0" stroke-width="1"/>
+                
+                <!-- 太极图案 -->
+                <path d="M50,8 A42,42 0 0,1 50,92 A21,21 0 0,1 50,50 A21,21 0 0,0 50,8" fill="#1a1a1a"/>
+                <path d="M50,8 A42,42 0 0,0 50,92 A21,21 0 0,0 50,50 A21,21 0 0,1 50,8" fill="#e8e8e8"/>
+                
+                <!-- 阴阳鱼眼 -->
+                <circle cx="50" cy="29" r="6" fill="#e8e8e8"/>
+                <circle cx="50" cy="71" r="6" fill="#1a1a1a"/>
+                
+                <!-- 八卦线条装饰 -->
+                <g stroke="#ccc" stroke-width="2" stroke-linecap="round">
+                    <!-- 上 -->
+                    <line x1="50" y1="2" x2="50" y2="6"/>
+                    <!-- 下 -->
+                    <line x1="50" y1="94" x2="50" y2="98"/>
+                    <!-- 左 -->
+                    <line x1="2" y1="50" x2="6" y2="50"/>
+                    <!-- 右 -->
+                    <line x1="94" y1="50" x2="98" y2="50"/>
+                    <!-- 左上 -->
+                    <line x1="15" y1="15" x2="18" y2="18"/>
+                    <!-- 右上 -->
+                    <line x1="82" y1="18" x2="85" y2="15"/>
+                    <!-- 左下 -->
+                    <line x1="18" y1="82" x2="15" y2="85"/>
+                    <!-- 右下 -->
+                    <line x1="82" y1="82" x2="85" y2="85"/>
+                </g>
+            </svg>
+            
+            <h1 class="page-title">输入你的生辰</h1>
+            <p class="page-subtitle">根据出生时间，绘制专属命盘<br>开启灵魂深处的探索之旅</p>
+        </div>
+
+        <!-- 表单 -->
+        <form class="form-container" id="birthchartForm">
+            <!-- 姓名 -->
+            <div class="form-section">
+                <label class="form-label">
+                    <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="7" r="4"/>
+                        <path d="M5.5 21v-2a4 4 0 0 1 4-4h5a4 4 0 0 1 4 4v2"/>
+                    </svg>
+                    姓名
+                </label>
+                <input type="text" class="form-input" placeholder="请输入您的姓名" required>
+            </div>
+
+            <!-- 性别 -->
+            <div class="form-section">
+                <label class="form-label">
+                    <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 8v8M8 12h8"/>
+                    </svg>
+                    性别
+                </label>
+                <div class="gender-group">
+                    <div class="gender-item selected" data-value="male" onclick="selectGender(this)">
+                        <svg class="gender-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="10" cy="14" r="5"/>
+                            <path d="M19 5l-5.4 5.4M19 5h-5M19 5v5"/>
+                        </svg>
+                        男
+                    </div>
+                    <div class="gender-item" data-value="female" onclick="selectGender(this)">
+                        <svg class="gender-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="9" r="5"/>
+                            <path d="M12 14v7M9 18h6"/>
+                        </svg>
+                        女
+                    </div>
+                </div>
+            </div>
+
+            <!-- 分隔线 -->
+            <div class="divider">
+                <div class="divider-line"></div>
+                <div class="divider-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="1"/>
+                        <circle cx="6" cy="12" r="1"/>
+                        <circle cx="18" cy="12" r="1"/>
+                    </svg>
+                </div>
+                <div class="divider-line"></div>
+            </div>
+
+            <!-- 出生日期 -->
+            <div class="form-section">
+                <label class="form-label">
+                    <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2"/>
+                        <path d="M16 2v4M8 2v4M3 10h18"/>
+                    </svg>
+                    出生日期
+                </label>
+                <div class="form-row">
+                    <div class="form-group">
+                        <div class="select-wrapper">
+                            <select class="form-select" id="birthYear" required>
+                                <option value="">年</option>
+                            </select>
+                            <div class="select-arrow">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 9l6 6 6-6"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="select-wrapper">
+                            <select class="form-select" id="birthMonth" required>
+                                <option value="">月</option>
+                            </select>
+                            <div class="select-arrow">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 9l6 6 6-6"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="select-wrapper">
+                            <select class="form-select" id="birthDay" required>
+                                <option value="">日</option>
+                            </select>
+                            <div class="select-arrow">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 9l6 6 6-6"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 出生时辰 -->
+            <div class="form-section">
+                <label class="form-label">
+                    <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 6v6l4 2"/>
+                    </svg>
+                    出生时辰
+                </label>
+                <div class="shichen-grid">
+                    <div class="shichen-item" data-value="子" onclick="selectShichen(this)">
+                        <span class="shichen-name">子时</span>
+                        <span class="shichen-time">23-01</span>
+                    </div>
+                    <div class="shichen-item" data-value="丑" onclick="selectShichen(this)">
+                        <span class="shichen-name">丑时</span>
+                        <span class="shichen-time">01-03</span>
+                    </div>
+                    <div class="shichen-item" data-value="寅" onclick="selectShichen(this)">
+                        <span class="shichen-name">寅时</span>
+                        <span class="shichen-time">03-05</span>
+                    </div>
+                    <div class="shichen-item" data-value="卯" onclick="selectShichen(this)">
+                        <span class="shichen-name">卯时</span>
+                        <span class="shichen-time">05-07</span>
+                    </div>
+                    <div class="shichen-item" data-value="辰" onclick="selectShichen(this)">
+                        <span class="shichen-name">辰时</span>
+                        <span class="shichen-time">07-09</span>
+                    </div>
+                    <div class="shichen-item" data-value="巳" onclick="selectShichen(this)">
+                        <span class="shichen-name">巳时</span>
+                        <span class="shichen-time">09-11</span>
+                    </div>
+                    <div class="shichen-item" data-value="午" onclick="selectShichen(this)">
+                        <span class="shichen-name">午时</span>
+                        <span class="shichen-time">11-13</span>
+                    </div>
+                    <div class="shichen-item" data-value="未" onclick="selectShichen(this)">
+                        <span class="shichen-name">未时</span>
+                        <span class="shichen-time">13-15</span>
+                    </div>
+                    <div class="shichen-item" data-value="申" onclick="selectShichen(this)">
+                        <span class="shichen-name">申时</span>
+                        <span class="shichen-time">15-17</span>
+                    </div>
+                    <div class="shichen-item" data-value="酉" onclick="selectShichen(this)">
+                        <span class="shichen-name">酉时</span>
+                        <span class="shichen-time">17-19</span>
+                    </div>
+                    <div class="shichen-item" data-value="戌" onclick="selectShichen(this)">
+                        <span class="shichen-name">戌时</span>
+                        <span class="shichen-time">19-21</span>
+                    </div>
+                    <div class="shichen-item" data-value="亥" onclick="selectShichen(this)">
+                        <span class="shichen-name">亥时</span>
+                        <span class="shichen-time">21-23</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 提交按钮 -->
+            <div class="submit-section">
+                <button type="submit" class="submit-btn">
+                    <svg class="submit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5"/>
+                        <path d="M2 12l10 5 10-5"/>
+                    </svg>
+                    生成我的命盘
+                </button>
+                <p class="footer-note">
+                    您的信息仅用于命盘分析<br>我们承诺保护您的隐私安全
+                </p>
+            </div>
+        </form>
+    </main>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

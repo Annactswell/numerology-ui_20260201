@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人格分析 - 灵魂旅迹</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <!-- ========== 顶部导航 ========== -->
+    <header class="header">
+        <div class="back-btn" onclick="history.back()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </div>
+        <div class="header-title">人格分析</div>
+        <div class="header-actions">
+            <div class="action-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="18" cy="5" r="3"/>
+                    <circle cx="6" cy="12" r="3"/>
+                    <circle cx="18" cy="19" r="3"/>
+                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== 主视觉 ========== -->
+    <div class="hero-section">
+        <div class="hero-visual">
+            <svg class="personality-chart" viewBox="0 0 200 200">
+                <!-- 背景圆 -->
+                <circle cx="100" cy="100" r="90" fill="none" stroke="#e8e8e8" stroke-width="1"/>
+                <circle cx="100" cy="100" r="70" fill="none" stroke="#e8e8e8" stroke-width="1"/>
+                <circle cx="100" cy="100" r="50" fill="none" stroke="#e8e8e8" stroke-width="1"/>
+                <circle cx="100" cy="100" r="30" fill="none" stroke="#e8e8e8" stroke-width="1"/>
+                
+                <!-- 五维雷达图 -->
+                <polygon class="radar-fill" points="100,20 170,70 150,150 50,150 30,70" fill="rgba(0,0,0,0.08)"/>
+                <polygon class="radar-line" points="100,35 155,72 140,135 60,135 45,72" fill="none" stroke="#000" stroke-width="2"/>
+                
+                <!-- 顶点标记 -->
+                <circle cx="100" cy="35" r="4" fill="#000"/>
+                <circle cx="155" cy="72" r="4" fill="#000"/>
+                <circle cx="140" cy="135" r="4" fill="#000"/>
+                <circle cx="60" cy="135" r="4" fill="#000"/>
+                <circle cx="45" cy="72" r="4" fill="#000"/>
+            </svg>
+        </div>
+        <h1 class="hero-title">探索你的命格人格</h1>
+        <p class="hero-desc">基于八字命理，解析你的性格特质与潜能</p>
+    </div>
+
+    <!-- ========== 五维人格 ========== -->
+    <div class="dimensions-section">
+        <div class="section-header">
+            <div class="section-title">五维人格分析</div>
+        </div>
+        <div class="dimension-list">
+            <div class="dimension-item">
+                <div class="dimension-header">
+                    <span class="dimension-name">木 · 仁德</span>
+                    <span class="dimension-value">85%</span>
+                </div>
+                <div class="dimension-bar">
+                    <div class="dimension-fill" style="width: 85%;"></div>
+                </div>
+                <p class="dimension-desc">富有同情心，善良正直，追求成长与创新</p>
+            </div>
+            <div class="dimension-item">
+                <div class="dimension-header">
+                    <span class="dimension-name">火 · 礼智</span>
+                    <span class="dimension-value">72%</span>
+                </div>
+                <div class="dimension-bar">
+                    <div class="dimension-fill" style="width: 72%;"></div>
+                </div>
+                <p class="dimension-desc">热情开朗，表达力强，具有领导魅力</p>
+            </div>
+            <div class="dimension-item">
+                <div class="dimension-header">
+                    <span class="dimension-name">土 · 信义</span>
+                    <span class="dimension-value">90%</span>
+                </div>
+                <div class="dimension-bar">
+                    <div class="dimension-fill" style="width: 90%;"></div>
+                </div>
+                <p class="dimension-desc">稳重可靠，诚实守信，包容性强</p>
+            </div>
+            <div class="dimension-item">
+                <div class="dimension-header">
+                    <span class="dimension-name">金 · 义勇</span>
+                    <span class="dimension-value">68%</span>
+                </div>
+                <div class="dimension-bar">
+                    <div class="dimension-fill" style="width: 68%;"></div>
+                </div>
+                <p class="dimension-desc">果断刚毅，原则性强，追求完美</p>
+            </div>
+            <div class="dimension-item">
+                <div class="dimension-header">
+                    <span class="dimension-name">水 · 智慧</span>
+                    <span class="dimension-value">78%</span>
+                </div>
+                <div class="dimension-bar">
+                    <div class="dimension-fill" style="width: 78%;"></div>
+                </div>
+                <p class="dimension-desc">思维敏捷，适应力强，洞察力出众</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== 核心特质 ========== -->
+    <div class="traits-section">
+        <div class="section-header">
+            <div class="section-title">核心性格特质</div>
+        </div>
+        <div class="traits-grid">
+            <div class="trait-tag">理性思维</div>
+            <div class="trait-tag">责任感强</div>
+            <div class="trait-tag">追求完美</div>
+            <div class="trait-tag">善于规划</div>
+            <div class="trait-tag">重视承诺</div>
+            <div class="trait-tag">独立自主</div>
+        </div>
+    </div>
+
+    <!-- ========== 人格解读 ========== -->
+    <div class="reading-section">
+        <div class="section-header">
+            <div class="section-title">命格解读</div>
+        </div>
+        <div class="reading-card">
+            <div class="reading-icon">
+                <svg width="32" height="32" viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="20" fill="none" stroke="#333" stroke-width="1.5"/>
+                    <path d="M24,4 A20,20 0 0,1 24,44 A10,10 0 0,1 24,24 A10,10 0 0,0 24,4" fill="#333"/>
+                    <circle cx="24" cy="14" r="2.5" fill="#fff"/>
+                    <circle cx="24" cy="34" r="2.5" fill="#333"/>
+                </svg>
+            </div>
+            <div class="reading-content">
+                <h3>日主为土，根基稳固</h3>
+                <p>您的日主五行属土，代表着稳重、包容与诚信的核心特质。土主信，您天生具有让人信赖的气质，在团队中往往扮演"定海神针"的角色。</p>
+            </div>
+        </div>
+        <div class="reading-card">
+            <div class="reading-icon">
+                <svg width="32" height="32" viewBox="0 0 48 48">
+                    <polygon points="24,6 30,18 44,18 33,27 37,40 24,32 11,40 15,27 4,18 18,18" fill="none" stroke="#333" stroke-width="1.5"/>
+                </svg>
+            </div>
+            <div class="reading-content">
+                <h3>食伤生财，创意无限</h3>
+                <p>命局中食伤星旺盛，赋予您出色的表达能力和创新思维。善于将想法转化为实际成果，适合从事创意、教育或自媒体相关工作。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== 获取完整报告 ========== -->
+    <div class="cta-section">
+        <div class="cta-card">
+            <div class="cta-content">
+                <h3>获取完整人格报告</h3>
+                <p>包含职业匹配、人际关系、潜能开发等深度分析</p>
+                <div class="cta-price">
+                    <span class="price-current">¥19.9</span>
+                    <span class="price-original">¥49.9</span>
+                </div>
+            </div>
+            <button class="cta-btn" onclick="handleGetReport()">立即获取</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

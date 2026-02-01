@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商城 - 灵魂旅迹</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <!-- ========== 顶部 ========== -->
+    <header class="header">
+        <div class="header-title">商城</div>
+        <div class="header-actions">
+            <div class="icon-btn">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                </svg>
+            </div>
+            <div class="icon-btn">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                <span class="cart-badge">3</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== 搜索栏 ========== -->
+    <div class="search-section">
+        <div class="search-bar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="1.5">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="text" placeholder="搜索开运物品、服务...">
+        </div>
+    </div>
+
+    <!-- ========== 分类标签 ========== -->
+    <div class="categories">
+        <div class="category-item active">全部</div>
+        <div class="category-item">命理服务</div>
+        <div class="category-item">开运饰品</div>
+        <div class="category-item">风水摆件</div>
+        <div class="category-item">书籍</div>
+    </div>
+
+    <!-- ========== Banner ========== -->
+    <div class="banner-section">
+        <div class="banner-card">
+            <svg class="banner-deco" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="48" fill="none" stroke="#fff" stroke-width="1"/>
+                <path d="M50,2 A48,48 0 0,1 50,98 A24,24 0 0,1 50,50 A24,24 0 0,0 50,2" fill="#fff"/>
+                <circle cx="50" cy="26" r="6" fill="#000"/>
+                <circle cx="50" cy="74" r="6" fill="#fff"/>
+            </svg>
+            <div class="banner-content">
+                <span class="banner-tag">限时特惠</span>
+                <h2 class="banner-title">新年开运大礼包</h2>
+                <p class="banner-desc">流年运势报告 + 专属开运建议</p>
+                <div class="banner-btn">
+                    立即抢购
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ========== 命理服务 ========== -->
+    <section class="section">
+        <div class="section-header">
+            <div class="section-title">命理服务</div>
+            <div class="section-more">全部 →</div>
+        </div>
+
+        <div class="services-list">
+            <div class="service-item" onclick="location.href='../service/index.html'">
+                <div class="service-icon">
+                    <svg width="24" height="24" viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="20" fill="none" stroke="#333" stroke-width="1.5"/>
+                        <path d="M24,4 A20,20 0 0,1 24,44 A10,10 0 0,1 24,24 A10,10 0 0,0 24,4" fill="#333"/>
+                        <circle cx="24" cy="14" r="2.5" fill="#fff"/>
+                        <circle cx="24" cy="34" r="2.5" fill="#333"/>
+                    </svg>
+                </div>
+                <div class="service-info">
+                    <div class="service-name">八字详批报告</div>
+                    <div class="service-desc">深度解析命盘，洞察人生轨迹</div>
+                </div>
+                <div class="service-price">299<span class="service-original">¥599</span></div>
+            </div>
+            <div class="service-item" onclick="location.href='../service/index.html'">
+                <div class="service-icon">
+                    <svg width="24" height="24" viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="18" fill="none" stroke="#333" stroke-width="1.5"/>
+                        <circle cx="24" cy="24" r="6" fill="none" stroke="#333" stroke-width="1.5"/>
+                        <line x1="24" y1="6" x2="24" y2="12" stroke="#333" stroke-width="1.5"/>
+                        <line x1="24" y1="36" x2="24" y2="42" stroke="#333" stroke-width="1.5"/>
+                        <line x1="6" y1="24" x2="12" y2="24" stroke="#333" stroke-width="1.5"/>
+                        <line x1="36" y1="24" x2="42" y2="24" stroke="#333" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <div class="service-info">
+                    <div class="service-name">流年运势分析</div>
+                    <div class="service-desc">把握时运，趋吉避凶</div>
+                </div>
+                <div class="service-price">199</div>
+            </div>
+            <div class="service-item" onclick="location.href='../service/index.html'">
+                <div class="service-icon">
+                    <svg width="24" height="24" viewBox="0 0 48 48">
+                        <path d="M24 8C28 8 32 12 32 18C32 24 24 32 24 32C24 32 16 24 16 18C16 12 20 8 24 8Z" fill="none" stroke="#333" stroke-width="1.5"/>
+                        <path d="M24 40C28 40 32 36 32 30C32 24 24 16 24 16C24 16 16 24 16 30C16 36 20 40 24 40Z" fill="none" stroke="#333" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <div class="service-info">
+                    <div class="service-name">姻缘配对分析</div>
+                    <div class="service-desc">解析情感契合度</div>
+                </div>
+                <div class="service-price">399</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 开运好物 ========== -->
+    <section class="section">
+        <div class="section-header">
+            <div class="section-title">开运好物</div>
+            <div class="section-more">全部 →</div>
+        </div>
+
+        <div class="products-grid">
+            <div class="product-card" onclick="location.href='../product/index.html'">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400&h=400&fit=crop&auto=format" alt="玉佩">
+                    <span class="product-tag">热销</span>
+                    <div class="product-like" onclick="event.stopPropagation()">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="product-name">天然和田玉平安扣</div>
+                <div class="product-bottom">
+                    <div class="product-price">688</div>
+                    <div class="product-sales">已售 1.2k</div>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="location.href='../product/index.html'">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=400&fit=crop&auto=format" alt="命理书籍">
+                    <div class="product-like" onclick="event.stopPropagation()">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="product-name">八字命理学入门</div>
+                <div class="product-bottom">
+                    <div class="product-price">128</div>
+                    <div class="product-sales">已售 856</div>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="location.href='../product/index.html'">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop&auto=format" alt="貔貅">
+                    <span class="product-tag">新品</span>
+                    <div class="product-like" onclick="event.stopPropagation()">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="product-name">黄铜貔貅招财摆件</div>
+                <div class="product-bottom">
+                    <div class="product-price">399</div>
+                    <div class="product-sales">已售 567</div>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="location.href='../product/index.html'">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=400&fit=crop&auto=format" alt="手串">
+                    <div class="product-like active" onclick="event.stopPropagation()">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="product-name">天然檀木手串</div>
+                <div class="product-bottom">
+                    <div class="product-price">268</div>
+                    <div class="product-sales">已售 2.3k</div>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="location.href='../product/index.html'">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1493106819501-66d381c466f1?w=400&h=400&fit=crop&auto=format" alt="罗盘">
+                    <div class="product-like" onclick="event.stopPropagation()">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="product-name">专业风水罗盘</div>
+                <div class="product-bottom">
+                    <div class="product-price">888</div>
+                    <div class="product-sales">已售 234</div>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="location.href='../product/index.html'">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=400&h=400&fit=crop&auto=format" alt="挂画">
+                    <span class="product-tag">精选</span>
+                    <div class="product-like" onclick="event.stopPropagation()">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="product-name">太极八卦玄关挂画</div>
+                <div class="product-bottom">
+                    <div class="product-price">199</div>
+                    <div class="product-sales">已售 432</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 大礼包专区 ========== -->
+    <section class="section">
+        <div class="section-header">
+            <div class="section-title">旺运大礼包</div>
+            <div class="section-more">全部 →</div>
+        </div>
+
+        <div class="products-grid">
+            <div class="product-card" onclick="location.href='../product/index.html'">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=400&h=400&fit=crop&auto=format" alt="好运加成大礼包">
+                    <span class="product-tag">爆款</span>
+                    <div class="product-like" onclick="event.stopPropagation()">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="product-name">好运加成大礼包</div>
+                <div class="product-desc">旺运贴纸+旺运手串</div>
+                <div class="product-bottom">
+                    <div class="product-price">299</div>
+                    <div class="product-sales">已售 1.8k</div>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="location.href='../product/index.html'">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&auto=format" alt="求职旺运大礼包">
+                    <span class="product-tag">热销</span>
+                    <div class="product-like" onclick="event.stopPropagation()">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="product-name">求职旺运大礼包</div>
+                <div class="product-desc">面试必过符+事业手串</div>
+                <div class="product-bottom">
+                    <div class="product-price">199</div>
+                    <div class="product-sales">已售 956</div>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="location.href='../product/index.html'">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1518707399486-6d702a84ff00?w=400&h=400&fit=crop&auto=format" alt="考试必过大礼包">
+                    <span class="product-tag">学生专属</span>
+                    <div class="product-like" onclick="event.stopPropagation()">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="product-name">考试必过旺运大礼包</div>
+                <div class="product-desc">文昌符+逢考必过手链</div>
+                <div class="product-bottom">
+                    <div class="product-price">168</div>
+                    <div class="product-sales">已售 2.1k</div>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="location.href='../product/index.html'">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?w=400&h=400&fit=crop&auto=format" alt="桃花运大礼包">
+                    <span class="product-tag">新品</span>
+                    <div class="product-like" onclick="event.stopPropagation()">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="product-name">桃花运壁纸礼包</div>
+                <div class="product-desc">专属壁纸+水晶手串</div>
+                <div class="product-bottom">
+                    <div class="product-price">249</div>
+                    <div class="product-sales">已售 678</div>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="location.href='../product/index.html'">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=400&fit=crop&auto=format" alt="职场上上签">
+                    <div class="product-like" onclick="event.stopPropagation()">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="product-name">职场上上签礼盒</div>
+                <div class="product-desc">事业开运符+祈福签筒</div>
+                <div class="product-bottom">
+                    <div class="product-price">188</div>
+                    <div class="product-sales">已售 432</div>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="location.href='../product/index.html'">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=400&fit=crop&auto=format" alt="好运桌面">
+                    <span class="product-tag">限量</span>
+                    <div class="product-like" onclick="event.stopPropagation()">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="product-name">好运电脑桌面套装</div>
+                <div class="product-desc">命理定制桌面+屏保</div>
+                <div class="product-bottom">
+                    <div class="product-price">199</div>
+                    <div class="product-sales">已售 567</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 底部导航 ========== -->
+    <nav class="tab-bar">
+        <div class="tab-item" onclick="location.href='../index.html'">
+            <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2C14 2 15 5 15 8C15 11 12 12 12 12C12 12 9 11 9 8C9 5 10 2 12 2Z"/>
+                <path d="M22 12C22 14 19 15 16 15C13 15 12 12 12 12C12 12 13 9 16 9C19 9 22 10 22 12Z"/>
+                <path d="M12 22C10 22 9 19 9 16C9 13 12 12 12 12C12 12 15 13 15 16C15 19 14 22 12 22Z"/>
+                <path d="M2 12C2 10 5 9 8 9C11 9 12 12 12 12C12 12 11 15 8 15C5 15 2 14 2 12Z"/>
+            </svg>
+            <span>画像</span>
+        </div>
+        <div class="tab-item" onclick="location.href='../insight/index.html'">
+            <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <circle cx="12" cy="12" r="4"/>
+            </svg>
+            <span>洞察</span>
+        </div>
+        <div class="tab-item tab-center" onclick="location.href='../consult/index.html'">
+            <div class="tab-center-btn">
+                <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+            </div>
+            <span>咨询</span>
+        </div>
+        <div class="tab-item active">
+            <svg class="tab-icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+            <span>商城</span>
+        </div>
+        <div class="tab-item" onclick="location.href='../mine/index.html'">
+            <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="7" r="4"/>
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            </svg>
+            <span>我的</span>
+        </div>
+    </nav>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

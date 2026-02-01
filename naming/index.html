@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旺铺起名 - 灵魂旅迹</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <!-- ========== 顶部导航 ========== -->
+    <header class="header">
+        <div class="back-btn" onclick="history.back()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </div>
+        <div class="header-title">旺铺起名</div>
+        <div class="header-right"></div>
+    </header>
+
+    <!-- ========== 主视觉 ========== -->
+    <div class="hero-section">
+        <div class="hero-icon">🏪</div>
+        <h1>好名旺铺，财源广进</h1>
+        <p>根据五行八字，为您的店铺<br>量身定制招财旺运好名字</p>
+    </div>
+
+    <!-- ========== 行业选择 ========== -->
+    <div class="industry-section">
+        <div class="section-header">
+            <div class="section-title">选择行业</div>
+        </div>
+        <div class="industry-grid">
+            <div class="industry-item active" data-industry="food">
+                <span class="industry-icon">🍜</span>
+                <span class="industry-name">餐饮美食</span>
+            </div>
+            <div class="industry-item" data-industry="retail">
+                <span class="industry-icon">🛍️</span>
+                <span class="industry-name">零售百货</span>
+            </div>
+            <div class="industry-item" data-industry="beauty">
+                <span class="industry-icon">💅</span>
+                <span class="industry-name">美容美发</span>
+            </div>
+            <div class="industry-item" data-industry="tech">
+                <span class="industry-icon">💻</span>
+                <span class="industry-name">科技互联</span>
+            </div>
+            <div class="industry-item" data-industry="education">
+                <span class="industry-icon">📚</span>
+                <span class="industry-name">教育培训</span>
+            </div>
+            <div class="industry-item" data-industry="health">
+                <span class="industry-icon">🏥</span>
+                <span class="industry-name">健康医疗</span>
+            </div>
+            <div class="industry-item" data-industry="service">
+                <span class="industry-icon">🔧</span>
+                <span class="industry-name">生活服务</span>
+            </div>
+            <div class="industry-item" data-industry="other">
+                <span class="industry-icon">✨</span>
+                <span class="industry-name">其他行业</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== 命名要求 ========== -->
+    <div class="form-section">
+        <div class="section-header">
+            <div class="section-title">命名要求</div>
+        </div>
+        <div class="form-group">
+            <label>店主生辰</label>
+            <div class="birth-inputs">
+                <select id="birthYear">
+                    <option value="">年份</option>
+                </select>
+                <select id="birthMonth">
+                    <option value="">月份</option>
+                </select>
+                <select id="birthDay">
+                    <option value="">日期</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>名称字数</label>
+            <div class="length-options">
+                <div class="length-item active" data-length="2">2字</div>
+                <div class="length-item" data-length="3">3字</div>
+                <div class="length-item" data-length="4">4字</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>期望关键字（可选）</label>
+            <input type="text" id="keywords" placeholder="如：福、顺、达、旺等">
+        </div>
+    </div>
+
+    <!-- ========== 生成按钮 ========== -->
+    <div class="action-section">
+        <button class="generate-btn" onclick="generateNames()">
+            生成旺铺名称
+            <span class="btn-price">¥9.9</span>
+        </button>
+    </div>
+
+    <!-- ========== 结果区域 ========== -->
+    <div class="result-section" id="resultSection" style="display: none;">
+        <div class="section-header">
+            <div class="section-title">推荐名称</div>
+            <div class="section-sub">根据您的八字五行精心匹配</div>
+        </div>
+        
+        <div class="name-list" id="nameList">
+            <!-- 名称卡片将由JS生成 -->
+        </div>
+
+        <div class="more-tip">
+            <span>不满意？</span>
+            <button class="more-btn" onclick="generateNames()">换一批</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

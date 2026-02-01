@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>灵魂旅迹 - 画像</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <!-- ========== 顶部 ========== -->
+    <header class="header">
+        <div class="header-title">画像</div>
+        <div class="header-actions">
+            <div class="icon-btn">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+            </div>
+            <div class="icon-btn">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== 用户欢迎区 ========== -->
+    <section class="user-welcome">
+        <div class="user-greeting">
+            <h2 class="greeting-text">你好，<span id="user-name">探索者</span></h2>
+            <p class="greeting-sub">今天是探索命理的好日子</p>
+        </div>
+        <div class="user-avatar" onclick="location.href='../mine/index.html'">
+            <svg viewBox="0 0 40 40">
+                <circle cx="20" cy="20" r="19" fill="#f5f5f5" stroke="#000" stroke-width="1"/>
+                <circle cx="20" cy="16" r="6" fill="none" stroke="#000" stroke-width="1"/>
+                <path d="M8 36c0-8 5.5-12 12-12s12 4 12 12" fill="none" stroke="#000" stroke-width="1"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ========== 今日速览 ========== -->
+    <section class="today-section">
+        <div class="section-header">
+            <div class="section-title">今日速览</div>
+            <div class="section-date">2026.02.01</div>
+        </div>
+        <div class="today-card">
+            <div class="today-left">
+                <div class="lunar-date">正月初四</div>
+                <div class="day-ganzhi">丙午</div>
+            </div>
+            <div class="today-right">
+                <div class="fortune-row">
+                    <span class="fortune-label">宜</span>
+                    <span class="fortune-value fortune-good">祭祀 · 祈福 · 开市 · 交易</span>
+                </div>
+                <div class="fortune-row">
+                    <span class="fortune-label">忌</span>
+                    <span class="fortune-value fortune-bad">动土 · 破土 · 安葬</span>
+                </div>
+                <div class="fortune-row">
+                    <span class="fortune-label">冲煞</span>
+                    <span class="fortune-value">冲鼠煞北</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 功能入口 ========== -->
+    <section class="features-section">
+        <div class="features-grid">
+            <div class="feature-item" onclick="location.href='../birthchart/index.html'">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="20" fill="none" stroke="#333" stroke-width="1.5"/>
+                        <path d="M24,4 A20,20 0 0,1 24,44 A10,10 0 0,1 24,24 A10,10 0 0,0 24,4" fill="#333"/>
+                        <circle cx="24" cy="14" r="2.5" fill="#fff"/>
+                        <circle cx="24" cy="34" r="2.5" fill="#333"/>
+                    </svg>
+                </div>
+                <span class="feature-text">八字排盘</span>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="18" fill="none" stroke="#333" stroke-width="1.5"/>
+                        <circle cx="24" cy="24" r="6" fill="none" stroke="#333" stroke-width="1.5"/>
+                        <line x1="24" y1="6" x2="24" y2="12" stroke="#333" stroke-width="1.5"/>
+                        <line x1="24" y1="36" x2="24" y2="42" stroke="#333" stroke-width="1.5"/>
+                        <line x1="6" y1="24" x2="12" y2="24" stroke="#333" stroke-width="1.5"/>
+                        <line x1="36" y1="24" x2="42" y2="24" stroke="#333" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <span class="feature-text">流年运势</span>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 48 48">
+                        <path d="M24 8C28 8 32 12 32 18C32 24 24 32 24 32C24 32 16 24 16 18C16 12 20 8 24 8Z" fill="none" stroke="#333" stroke-width="1.5"/>
+                        <path d="M24 40C28 40 32 36 32 30C32 24 24 16 24 16C24 16 16 24 16 30C16 36 20 40 24 40Z" fill="none" stroke="#333" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <span class="feature-text">姻缘配对</span>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 48 48">
+                        <rect x="8" y="8" width="32" height="32" rx="4" fill="none" stroke="#333" stroke-width="1.5"/>
+                        <line x1="8" y1="16" x2="40" y2="16" stroke="#333" stroke-width="1.5"/>
+                        <line x1="16" y1="8" x2="16" y2="16" stroke="#333" stroke-width="1.5"/>
+                        <line x1="32" y1="8" x2="32" y2="16" stroke="#333" stroke-width="1.5"/>
+                        <circle cx="24" cy="30" r="6" fill="none" stroke="#333" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <span class="feature-text">择日吉时</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ========== 自我认知工坊 ========== -->
+    <section class="workshop-section" style="padding-top: 28px;">
+        <div class="workshop-card">
+            <svg class="workshop-deco" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="48" fill="none" stroke="#fff" stroke-width="1"/>
+                <path d="M50,2 A48,48 0 0,1 50,98 A24,24 0 0,1 50,50 A24,24 0 0,0 50,2" fill="#fff"/>
+                <circle cx="50" cy="26" r="6" fill="#000"/>
+                <circle cx="50" cy="74" r="6" fill="#fff"/>
+            </svg>
+            <div class="workshop-content">
+                <span class="workshop-tag">首次探索</span>
+                <h2 class="workshop-title">自我认知工坊</h2>
+                <p class="workshop-desc">完成首次探索，绘制专属的灵魂地图<br>深入了解你的命格特质与人生方向</p>
+                <div class="workshop-btn" onclick="location.href='../birthchart/index.html'">
+                    开始探索
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 最近报告 ========== -->
+    <section class="recent-section">
+        <div class="section-header">
+            <div class="section-title">最近报告</div>
+            <div class="section-date" style="cursor: pointer;">全部 →</div>
+        </div>
+        <div class="report-list">
+            <div class="report-item" onclick="location.href='../result/index.html'">
+                <div class="report-icon">
+                    <svg width="28" height="28" viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="20" fill="none" stroke="#333" stroke-width="1.5"/>
+                        <path d="M24,4 A20,20 0 0,1 24,44 A10,10 0 0,1 24,24 A10,10 0 0,0 24,4" fill="#333"/>
+                        <circle cx="24" cy="14" r="2.5" fill="#fff"/>
+                        <circle cx="24" cy="34" r="2.5" fill="#333"/>
+                    </svg>
+                </div>
+                <div class="report-info">
+                    <div class="report-title">八字详批报告</div>
+                    <div class="report-meta">2026-01-28 · 甲午年 丙子月 庚寅日</div>
+                </div>
+                <svg class="report-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 命理知识 ========== -->
+    <section class="knowledge-section">
+        <div class="section-header">
+            <div class="section-title">命理知识</div>
+            <div class="section-date" style="cursor: pointer;">更多 →</div>
+        </div>
+        <div class="knowledge-scroll">
+            <div class="knowledge-card">
+                <div class="knowledge-title">什么是八字？</div>
+                <div class="knowledge-desc">八字即生辰八字，是指一个人出生时的干支历日期，由年、月、日、时四柱组成...</div>
+            </div>
+            <div class="knowledge-card">
+                <div class="knowledge-title">五行相生相克</div>
+                <div class="knowledge-desc">五行是指金、木、水、火、土五种物质元素，它们之间存在着相生相克的关系...</div>
+            </div>
+            <div class="knowledge-card">
+                <div class="knowledge-title">十神详解</div>
+                <div class="knowledge-desc">十神是八字命理中的重要概念，包括比肩、劫财、食神、伤官、正财、偏财...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 底部导航 ========== -->
+    <nav class="tab-bar">
+        <div class="tab-item active">
+            <svg class="tab-icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2C14 2 15 5 15 8C15 11 12 12 12 12C12 12 9 11 9 8C9 5 10 2 12 2Z"/>
+                <path d="M22 12C22 14 19 15 16 15C13 15 12 12 12 12C12 12 13 9 16 9C19 9 22 10 22 12Z"/>
+                <path d="M12 22C10 22 9 19 9 16C9 13 12 12 12 12C12 12 15 13 15 16C15 19 14 22 12 22Z"/>
+                <path d="M2 12C2 10 5 9 8 9C11 9 12 12 12 12C12 12 11 15 8 15C5 15 2 14 2 12Z"/>
+            </svg>
+            <span>画像</span>
+        </div>
+        <div class="tab-item" onclick="location.href='../insight/index.html'">
+            <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <circle cx="12" cy="12" r="4"/>
+            </svg>
+            <span>洞察</span>
+        </div>
+        <div class="tab-item tab-center" onclick="location.href='../consult/index.html'">
+            <div class="tab-center-btn">
+                <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+            </div>
+            <span>咨询</span>
+        </div>
+        <div class="tab-item" onclick="location.href='../shop/index.html'">
+            <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+            <span>商城</span>
+        </div>
+        <div class="tab-item" onclick="location.href='../mine/index.html'">
+            <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="7" r="4"/>
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            </svg>
+            <span>我的</span>
+        </div>
+    </nav>
+</div>
+
+<script>
+// 检查登录状态
+(function() {
+    const userInfo = localStorage.getItem('userInfo');
+    if (userInfo) {
+        const info = JSON.parse(userInfo);
+        if (info.name) {
+            document.getElementById('user-name').textContent = info.name;
+        }
+    }
+    // 如果需要强制引导，可以取消下面的注释
+    // else {
+    //     location.href = '../onboarding/index.html';
+    // }
+})();
+</script>
+
+</body>
+</html>

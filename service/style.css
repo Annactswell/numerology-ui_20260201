@@ -1,0 +1,730 @@
+:root {
+    --bg-color: #ffffff;
+    --text-main: #000000;
+    --text-sub: #555555;
+    --text-hint: #999999;
+    --accent-black: #0a0a0a;
+    --gray-light: #f5f5f5;
+    --gray-medium: #e8e8e8;
+    --border-color: #eee;
+    --serif-font: "Songti SC", "SimSun", "Times New Roman", serif;
+    --sans-font: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--sans-font);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 430px;
+    background-color: var(--bg-color);
+    position: relative;
+}
+
+/* ========== 顶部导航 ========== */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 430px;
+    height: 56px;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.back-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.header-title {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--serif-font);
+    letter-spacing: 1px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.action-btn {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+
+/* ========== 服务主视觉 ========== */
+.service-hero {
+    margin-top: 56px;
+    height: 280px;
+    background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-taiji {
+    width: 200px;
+    height: 200px;
+    animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.bagua-deco {
+    position: absolute;
+    font-size: 24px;
+    color: rgba(255,255,255,0.1);
+    font-family: var(--serif-font);
+}
+
+.bagua-1 { top: 30px; left: 30px; }
+.bagua-2 { top: 30px; right: 30px; }
+.bagua-3 { bottom: 50px; left: 30px; }
+.bagua-4 { bottom: 50px; right: 30px; }
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+}
+
+.service-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 12px;
+    font-size: 11px;
+    margin-bottom: 16px;
+    color: rgba(255,255,255,0.7);
+}
+
+.service-title {
+    font-size: 28px;
+    font-family: var(--serif-font);
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+}
+
+.service-slogan {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 2px;
+}
+
+/* ========== 价格信息 ========== */
+.price-section {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.price-main {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+}
+
+.price-currency {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.price-value {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: var(--serif-font);
+}
+
+.price-original {
+    font-size: 14px;
+    color: var(--text-hint);
+    text-decoration: line-through;
+    margin-left: 8px;
+}
+
+.price-discount {
+    font-size: 11px;
+    padding: 2px 6px;
+    background: var(--accent-black);
+    color: #fff;
+    border-radius: 4px;
+    margin-left: 8px;
+}
+
+.price-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.sold-count {
+    font-size: 12px;
+    color: var(--text-hint);
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: var(--text-sub);
+}
+
+.rating svg {
+    color: #333;
+}
+
+/* ========== 服务版本选择 ========== */
+.versions-section {
+    padding: 24px;
+}
+
+.section-label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.version-options {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+}
+
+.version-options::-webkit-scrollbar {
+    display: none;
+}
+
+.version-card {
+    flex: 1;
+    min-width: 110px;
+    padding: 16px 12px;
+    border: 1.5px solid var(--gray-medium);
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.version-card.active {
+    border-color: var(--accent-black);
+    background: var(--gray-light);
+}
+
+.version-card:hover {
+    border-color: var(--text-sub);
+}
+
+.version-tag {
+    position: absolute;
+    top: -8px;
+    right: 8px;
+    padding: 2px 6px;
+    background: var(--accent-black);
+    color: #fff;
+    font-size: 9px;
+    border-radius: 4px;
+}
+
+.version-name {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.version-price {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: var(--serif-font);
+    margin-bottom: 6px;
+}
+
+.version-desc {
+    font-size: 10px;
+    color: var(--text-hint);
+    line-height: 1.4;
+}
+
+/* ========== 分隔线 ========== */
+.divider {
+    height: 8px;
+    background: var(--gray-light);
+}
+
+/* ========== 区块通用 ========== */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--serif-font);
+    letter-spacing: 1px;
+}
+
+.section-header svg {
+    flex-shrink: 0;
+}
+
+/* ========== 报告内容 ========== */
+.content-section {
+    padding: 24px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.content-item {
+    text-align: center;
+    padding: 16px 8px;
+    background: var(--gray-light);
+    border-radius: 12px;
+}
+
+.content-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 10px;
+}
+
+.content-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.content-title {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.content-desc {
+    font-size: 10px;
+    color: var(--text-hint);
+    line-height: 1.4;
+}
+
+/* ========== 服务流程 ========== */
+.process-section {
+    padding: 24px;
+}
+
+.process-timeline {
+    position: relative;
+    padding-left: 32px;
+}
+
+.process-timeline::before {
+    content: '';
+    position: absolute;
+    left: 11px;
+    top: 20px;
+    bottom: 20px;
+    width: 1px;
+    background: var(--gray-medium);
+}
+
+.process-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 12px 0;
+    position: relative;
+}
+
+.step-number {
+    position: absolute;
+    left: -32px;
+    width: 24px;
+    height: 24px;
+    background: var(--accent-black);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.step-desc {
+    font-size: 12px;
+    color: var(--text-hint);
+}
+
+/* ========== 命理师介绍 ========== */
+.master-section {
+    padding: 24px;
+}
+
+.master-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: var(--gray-light);
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.master-avatar {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.master-avatar svg {
+    width: 100%;
+    height: 100%;
+}
+
+.master-info {
+    flex: 1;
+}
+
+.master-name {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--serif-font);
+    margin-bottom: 2px;
+}
+
+.master-title {
+    font-size: 12px;
+    color: var(--text-sub);
+    margin-bottom: 4px;
+}
+
+.master-exp {
+    font-size: 11px;
+    color: var(--text-hint);
+}
+
+.master-badge {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    background: var(--accent-black);
+    color: #fff;
+    border-radius: 12px;
+    font-size: 11px;
+    flex-shrink: 0;
+}
+
+.master-intro {
+    font-size: 13px;
+    color: var(--text-sub);
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* ========== 用户评价 ========== */
+.reviews-section {
+    padding: 24px;
+}
+
+.review-count {
+    margin-left: auto;
+    font-size: 12px;
+    color: var(--text-hint);
+    font-weight: 400;
+}
+
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.review-item {
+    padding: 16px;
+    background: var(--gray-light);
+    border-radius: 12px;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.reviewer-avatar {
+    width: 36px;
+    height: 36px;
+    background: var(--accent-black);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-family: var(--serif-font);
+    flex-shrink: 0;
+}
+
+.reviewer-info {
+    flex: 1;
+}
+
+.reviewer-name {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.review-version {
+    font-size: 11px;
+    color: var(--text-hint);
+}
+
+.review-stars {
+    display: flex;
+    gap: 2px;
+    color: #333;
+}
+
+.review-content {
+    font-size: 13px;
+    color: var(--text-sub);
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.review-time {
+    font-size: 11px;
+    color: var(--text-hint);
+}
+
+.view-more {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-sub);
+    cursor: pointer;
+}
+
+/* ========== 常见问题 ========== */
+.faq-section {
+    padding: 24px;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--gray-medium);
+    border: 1px solid var(--gray-medium);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.faq-item {
+    background: var(--bg-color);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.faq-arrow {
+    transition: transform 0.2s;
+    flex-shrink: 0;
+    color: var(--text-hint);
+}
+
+.faq-item.active .faq-arrow {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 16px 16px;
+    font-size: 13px;
+    color: var(--text-sub);
+    line-height: 1.7;
+    display: none;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* ========== 服务保障 ========== */
+.guarantee-section {
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-around;
+    background: var(--gray-light);
+}
+
+.guarantee-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: var(--text-sub);
+}
+
+.guarantee-item svg {
+    color: var(--text-main);
+}
+
+/* ========== 底部购买栏 ========== */
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 430px;
+    height: 80px;
+    padding: 0 20px;
+    padding-bottom: env(safe-area-inset-bottom, 0);
+    background: var(--bg-color);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    z-index: 100;
+}
+
+.bottom-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.action-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    cursor: pointer;
+    color: var(--text-sub);
+    transition: color 0.2s;
+    width: 44px;
+}
+
+.action-item span {
+    font-size: 10px;
+}
+
+.action-item.active {
+    color: var(--text-main);
+}
+
+.action-item.active svg {
+    fill: var(--text-main);
+}
+
+.bottom-buttons {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn-buy {
+    flex: 1;
+    height: 44px;
+    border: none;
+    border-radius: 22px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: var(--accent-black);
+    color: #fff;
+}
+
+.btn-buy:hover {
+    opacity: 0.9;
+}
+
+.btn-buy:active {
+    transform: scale(0.98);
+}
+
+/* ========== 响应式 ========== */
+@media (min-width: 430px) {
+    body {
+        background-color: #f5f5f5;
+    }
+    
+    .app-container {
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+}

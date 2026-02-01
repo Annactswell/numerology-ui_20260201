@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>洞察 - 灵魂旅迹</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <!-- ========== 顶部 ========== -->
+    <header class="header">
+        <div class="header-title">洞察</div>
+        <div class="header-actions">
+            <div class="icon-btn">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+            </div>
+            <div class="icon-btn">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 20h9"/>
+                    <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== 今日运势卡片 ========== -->
+    <section class="fortune-banner">
+        <div class="fortune-card">
+            <div class="fortune-bg">
+                <svg class="fortune-taiji" viewBox="0 0 120 120">
+                    <circle cx="60" cy="60" r="55" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                    <path d="M60,5 A55,55 0 0,1 60,115 A27.5,27.5 0 0,1 60,60 A27.5,27.5 0 0,0 60,5" fill="rgba(255,255,255,0.15)"/>
+                </svg>
+            </div>
+            <div class="fortune-content">
+                <div class="fortune-date">
+                    <span class="lunar">正月初四</span>
+                    <span class="solar">2026.02.01</span>
+                </div>
+                <div class="fortune-score">
+                    <span class="score-num">88</span>
+                    <span class="score-label">今日运势</span>
+                </div>
+                <div class="fortune-tips">
+                    <span class="tip-good">宜 祭祀 祈福</span>
+                    <span class="tip-bad">忌 动土 破土</span>
+                </div>
+            </div>
+            <div class="fortune-arrow">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 命理工具网格 ========== -->
+    <section class="tools-section">
+        <div class="section-header">
+            <div class="section-title">命理工具</div>
+        </div>
+
+        <div class="tools-grid">
+            <div class="tool-card large" onclick="location.href='../birthchart/index.html'">
+                <div class="tool-icon">
+                    <svg viewBox="0 0 60 60">
+                        <circle cx="30" cy="30" r="25" fill="none" stroke="#000" stroke-width="1.5"/>
+                        <path d="M30,5 A25,25 0 0,1 30,55 A12.5,12.5 0 0,1 30,30 A12.5,12.5 0 0,0 30,5" fill="#000"/>
+                        <circle cx="30" cy="17.5" r="4" fill="#fff"/>
+                        <circle cx="30" cy="42.5" r="4" fill="#000"/>
+                    </svg>
+                </div>
+                <div class="tool-info">
+                    <div class="tool-name">八字排盘</div>
+                    <div class="tool-desc">输入生辰，生成专属命盘</div>
+                </div>
+                <div class="tool-badge">核心</div>
+            </div>
+
+            <div class="tool-card" onclick="location.href='../result/index.html'">
+                <div class="tool-icon small">
+                    <svg viewBox="0 0 40 40">
+                        <rect x="6" y="4" width="28" height="32" rx="3" fill="none" stroke="#000" stroke-width="1.5"/>
+                        <line x1="12" y1="12" x2="28" y2="12" stroke="#000" stroke-width="1.5"/>
+                        <line x1="12" y1="18" x2="28" y2="18" stroke="#000" stroke-width="1.5"/>
+                        <line x1="12" y1="24" x2="22" y2="24" stroke="#000" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <div class="tool-name">命盘报告</div>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-icon small">
+                    <svg viewBox="0 0 40 40">
+                        <circle cx="20" cy="20" r="14" fill="none" stroke="#000" stroke-width="1.5"/>
+                        <circle cx="20" cy="20" r="5" fill="none" stroke="#000" stroke-width="1.5"/>
+                        <line x1="20" y1="6" x2="20" y2="10" stroke="#000" stroke-width="1.5"/>
+                        <line x1="20" y1="30" x2="20" y2="34" stroke="#000" stroke-width="1.5"/>
+                        <line x1="6" y1="20" x2="10" y2="20" stroke="#000" stroke-width="1.5"/>
+                        <line x1="30" y1="20" x2="34" y2="20" stroke="#000" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <div class="tool-name">流年运势</div>
+            </div>
+        </div>
+
+        <div class="tools-grid-small">
+            <div class="tool-item">
+                <div class="tool-icon-mini">
+                    <svg viewBox="0 0 32 32">
+                        <path d="M16 6C18 6 20 8 20 12C20 16 16 20 16 20C16 20 12 16 12 12C12 8 14 6 16 6Z" fill="none" stroke="#000" stroke-width="1.2"/>
+                        <path d="M16 26C18 26 20 24 20 20C20 16 16 12 16 12C16 12 12 16 12 20C12 24 14 26 16 26Z" fill="none" stroke="#000" stroke-width="1.2"/>
+                    </svg>
+                </div>
+                <span>姻缘配对</span>
+            </div>
+            <div class="tool-item">
+                <div class="tool-icon-mini">
+                    <svg viewBox="0 0 32 32">
+                        <rect x="6" y="6" width="20" height="20" rx="3" fill="none" stroke="#000" stroke-width="1.2"/>
+                        <line x1="6" y1="12" x2="26" y2="12" stroke="#000" stroke-width="1.2"/>
+                        <line x1="12" y1="6" x2="12" y2="12" stroke="#000" stroke-width="1.2"/>
+                        <line x1="20" y1="6" x2="20" y2="12" stroke="#000" stroke-width="1.2"/>
+                        <circle cx="16" cy="20" r="3" fill="#000"/>
+                    </svg>
+                </div>
+                <span>择日吉时</span>
+            </div>
+            <div class="tool-item">
+                <div class="tool-icon-mini">
+                    <svg viewBox="0 0 32 32">
+                        <polygon points="16,4 19,13 28,13 21,19 24,28 16,23 8,28 11,19 4,13 13,13" fill="none" stroke="#000" stroke-width="1.2"/>
+                    </svg>
+                </div>
+                <span>每日运程</span>
+            </div>
+            <div class="tool-item">
+                <div class="tool-icon-mini">
+                    <svg viewBox="0 0 32 32">
+                        <circle cx="16" cy="10" r="5" fill="none" stroke="#000" stroke-width="1.2"/>
+                        <path d="M8 26c0-5 3.5-8 8-8s8 3 8 8" fill="none" stroke="#000" stroke-width="1.2"/>
+                    </svg>
+                </div>
+                <span>性格分析</span>
+            </div>
+            <div class="tool-item">
+                <div class="tool-icon-mini">
+                    <svg viewBox="0 0 32 32">
+                        <path d="M16 4l12 8v16H4V12z" fill="none" stroke="#000" stroke-width="1.2"/>
+                        <rect x="12" y="18" width="8" height="10" fill="none" stroke="#000" stroke-width="1.2"/>
+                    </svg>
+                </div>
+                <span>风水布局</span>
+            </div>
+            <div class="tool-item">
+                <div class="tool-icon-mini">
+                    <svg viewBox="0 0 32 32">
+                        <circle cx="16" cy="16" r="10" fill="none" stroke="#000" stroke-width="1.2"/>
+                        <path d="M16,6 A10,10 0 0,1 16,26 A5,5 0 0,1 16,16 A5,5 0 0,0 16,6" fill="#000"/>
+                    </svg>
+                </div>
+                <span>五行调理</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ========== 趣味测算 ========== -->
+    <section class="fun-section">
+        <div class="section-header">
+            <div class="section-title">趣味测算</div>
+            <div class="section-more">更多 →</div>
+        </div>
+
+        <div class="fun-scroll">
+            <div class="fun-card purple">
+                <div class="fun-icon">
+                    <svg viewBox="0 0 40 40">
+                        <circle cx="20" cy="20" r="16" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M12 20h16M20 12v16" stroke="currentColor" stroke-width="1.5"/>
+                        <circle cx="20" cy="20" r="4" fill="currentColor"/>
+                    </svg>
+                </div>
+                <div class="fun-name">塔罗占卜</div>
+                <div class="fun-desc">抽取三张牌</div>
+            </div>
+            <div class="fun-card orange">
+                <div class="fun-icon">
+                    <svg viewBox="0 0 40 40">
+                        <rect x="8" y="8" width="24" height="24" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                        <text x="20" y="26" font-size="14" text-anchor="middle" fill="currentColor">签</text>
+                    </svg>
+                </div>
+                <div class="fun-name">观音灵签</div>
+                <div class="fun-desc">求一支上上签</div>
+            </div>
+            <div class="fun-card green">
+                <div class="fun-icon">
+                    <svg viewBox="0 0 40 40">
+                        <circle cx="20" cy="15" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M10 36c0-7 4.5-11 10-11s10 4 10 11" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <div class="fun-name">前世今生</div>
+                <div class="fun-desc">探索轮回记忆</div>
+            </div>
+            <div class="fun-card blue">
+                <div class="fun-icon">
+                    <svg viewBox="0 0 40 40">
+                        <path d="M20 5L25 15L36 17L28 25L30 36L20 31L10 36L12 25L4 17L15 15Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <div class="fun-name">星座运势</div>
+                <div class="fun-desc">本周运势解读</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 数字玄学 ========== -->
+    <section class="numerology-section">
+        <div class="section-header">
+            <div class="section-title">数字玄学</div>
+        </div>
+
+        <div class="numerology-grid">
+            <div class="numerology-card">
+                <div class="num-display">
+                    <span class="num-main">7</span>
+                    <span class="num-label">幸运数字</span>
+                </div>
+                <div class="num-info">
+                    <p>根据您的八字分析，数字7与您的命格最为契合</p>
+                </div>
+            </div>
+            <div class="numerology-card dark">
+                <div class="num-display">
+                    <span class="num-main">申酉</span>
+                    <span class="num-label">吉时</span>
+                </div>
+                <div class="num-info">
+                    <p>15:00-19:00 为今日最佳行动时间</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="lucky-colors">
+            <div class="lucky-title">幸运色彩</div>
+            <div class="color-palette">
+                <div class="color-item" style="background: #1a1a1a;">
+                    <span>黑</span>
+                </div>
+                <div class="color-item" style="background: #f5f5f5; color: #333;">
+                    <span>白</span>
+                </div>
+                <div class="color-item" style="background: #4a6741;">
+                    <span>青</span>
+                </div>
+                <div class="color-item active" style="background: #8b7355;">
+                    <span>棕</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ========== 我的报告 ========== -->
+    <section class="reports-section">
+        <div class="section-header">
+            <div class="section-title">我的报告</div>
+            <div class="section-more">全部 →</div>
+        </div>
+
+        <div class="report-cards">
+            <div class="report-card" onclick="location.href='../result/index.html'">
+                <div class="report-thumb">
+                    <svg viewBox="0 0 60 60">
+                        <circle cx="30" cy="30" r="25" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1"/>
+                        <path d="M30,5 A25,25 0 0,1 30,55 A12.5,12.5 0 0,1 30,30 A12.5,12.5 0 0,0 30,5" fill="#333"/>
+                    </svg>
+                </div>
+                <div class="report-info">
+                    <div class="report-type">八字详批报告</div>
+                    <div class="report-meta">2026-01-28 生成</div>
+                </div>
+                <svg class="report-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="1.5">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </div>
+
+            <div class="report-card">
+                <div class="report-thumb">
+                    <svg viewBox="0 0 60 60">
+                        <circle cx="30" cy="30" r="25" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1"/>
+                        <circle cx="30" cy="30" r="15" fill="none" stroke="#333" stroke-width="1.5"/>
+                        <circle cx="30" cy="30" r="5" fill="#333"/>
+                    </svg>
+                </div>
+                <div class="report-info">
+                    <div class="report-type">流年运势分析</div>
+                    <div class="report-meta">2026-01-15 生成</div>
+                </div>
+                <svg class="report-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="1.5">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="create-report-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"/>
+                <line x1="5" y1="12" x2="19" y2="12"/>
+            </svg>
+            生成新报告
+        </div>
+    </section>
+
+    <!-- ========== 知识专栏 ========== -->
+    <section class="knowledge-section">
+        <div class="section-header">
+            <div class="section-title">命理知识</div>
+            <div class="section-more">更多 →</div>
+        </div>
+
+        <div class="knowledge-featured">
+            <div class="knowledge-bg">
+                <svg viewBox="0 0 200 100" preserveAspectRatio="xMidYMid slice">
+                    <circle cx="160" cy="50" r="40" fill="none" stroke="rgba(0,0,0,0.05)" stroke-width="1"/>
+                    <circle cx="160" cy="50" r="30" fill="none" stroke="rgba(0,0,0,0.05)" stroke-width="1"/>
+                </svg>
+            </div>
+            <div class="knowledge-content">
+                <span class="knowledge-tag">入门必读</span>
+                <h3>什么是八字命理？</h3>
+                <p>八字即生辰八字，是指一个人出生时的干支历日期...</p>
+            </div>
+        </div>
+
+        <div class="knowledge-list">
+            <div class="knowledge-item">
+                <div class="knowledge-icon">壹</div>
+                <div class="knowledge-info">
+                    <div class="knowledge-name">五行相生相克原理</div>
+                    <div class="knowledge-views">1.2k 阅读</div>
+                </div>
+            </div>
+            <div class="knowledge-item">
+                <div class="knowledge-icon">贰</div>
+                <div class="knowledge-info">
+                    <div class="knowledge-name">十天干详解</div>
+                    <div class="knowledge-views">856 阅读</div>
+                </div>
+            </div>
+            <div class="knowledge-item">
+                <div class="knowledge-icon">叁</div>
+                <div class="knowledge-info">
+                    <div class="knowledge-name">十二地支与生肖</div>
+                    <div class="knowledge-views">1.5k 阅读</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 占位 -->
+    <div style="height: 90px;"></div>
+
+    <!-- ========== 底部导航 ========== -->
+    <nav class="tab-bar">
+        <div class="tab-item" onclick="location.href='../index.html'">
+            <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2C14 2 15 5 15 8C15 11 12 12 12 12C12 12 9 11 9 8C9 5 10 2 12 2Z"/>
+                <path d="M22 12C22 14 19 15 16 15C13 15 12 12 12 12C12 12 13 9 16 9C19 9 22 10 22 12Z"/>
+                <path d="M12 22C10 22 9 19 9 16C9 13 12 12 12 12C12 12 15 13 15 16C15 19 14 22 12 22Z"/>
+                <path d="M2 12C2 10 5 9 8 9C11 9 12 12 12 12C12 12 11 15 8 15C5 15 2 14 2 12Z"/>
+            </svg>
+            <span>画像</span>
+        </div>
+        <div class="tab-item active">
+            <svg class="tab-icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10" fill="none"/>
+                <circle cx="12" cy="12" r="4"/>
+            </svg>
+            <span>洞察</span>
+        </div>
+        <div class="tab-item tab-center" onclick="location.href='../consult/index.html'">
+            <div class="tab-center-btn">
+                <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+            </div>
+            <span>咨询</span>
+        </div>
+        <div class="tab-item" onclick="location.href='../shop/index.html'">
+            <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+            <span>商城</span>
+        </div>
+        <div class="tab-item" onclick="location.href='../mine/index.html'">
+            <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="7" r="4"/>
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            </svg>
+            <span>我的</span>
+        </div>
+    </nav>
+</div>
+
+</body>
+</html>

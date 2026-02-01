@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>咨询 - 灵魂旅迹</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <!-- ========== 顶部导航 ========== -->
+    <header class="header">
+        <div class="back-btn" onclick="history.back()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </div>
+        <div class="header-title">命理咨询</div>
+        <div class="header-actions">
+            <div class="icon-btn">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="12" cy="12" r="1"/>
+                    <circle cx="19" cy="12" r="1"/>
+                    <circle cx="5" cy="12" r="1"/>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== 聊天区域 ========== -->
+    <div class="chat-area">
+        <!-- 欢迎消息 -->
+        <div class="welcome-message">
+            <div class="ai-icon">
+                <svg width="24" height="24" viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="20" fill="none" stroke="#333" stroke-width="1.5"/>
+                    <path d="M24,4 A20,20 0 0,1 24,44 A10,10 0 0,1 24,24 A10,10 0 0,0 24,4" fill="#333"/>
+                    <circle cx="24" cy="14" r="2.5" fill="#fff"/>
+                    <circle cx="24" cy="34" r="2.5" fill="#333"/>
+                </svg>
+            </div>
+            <h3>灵析 · 命理顾问</h3>
+            <p>您好，我是您的专属命理顾问。<br>结合您的八字命盘，为您解答运势、姻缘、事业等问题。</p>
+        </div>
+
+        <!-- AI 初始消息 -->
+        <div class="message ai">
+            <div class="message-avatar">
+                <svg width="20" height="20" viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="20" fill="none" stroke="#333" stroke-width="1.5"/>
+                    <path d="M24,4 A20,20 0 0,1 24,44 A10,10 0 0,1 24,24 A10,10 0 0,0 24,4" fill="#333"/>
+                    <circle cx="24" cy="14" r="2.5" fill="#fff"/>
+                    <circle cx="24" cy="34" r="2.5" fill="#333"/>
+                </svg>
+            </div>
+            <div class="message-content">
+                您好！我已读取您的八字信息。今日是丙午日，整体运势平稳。请问有什么想要了解的吗？可以直接提问，或点击下方的快捷问题开始。
+            </div>
+        </div>
+
+        <!-- 快捷问题 -->
+        <div class="quick-questions">
+            <div class="quick-item">今天运势如何？</div>
+            <div class="quick-item">分析我的五行</div>
+            <div class="quick-item">姻缘何时到来？</div>
+        </div>
+    </div>
+
+    <!-- ========== 输入区域 ========== -->
+    <div class="input-area">
+        <div class="input-wrapper">
+            <textarea rows="3" placeholder="输入您的问题..."></textarea>
+            <button class="send-btn" disabled>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 19V5"/>
+                    <path d="M5 12l7-7 7 7"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

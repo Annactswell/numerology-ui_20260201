@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>命盘分析 - 灵魂旅迹</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <!-- 顶部导航 -->
+    <header class="header">
+        <div class="back-btn" onclick="location.href='../index/index.html'">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </div>
+        <div class="header-title">命盘分析</div>
+        <div class="header-actions">
+            <div class="action-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+                    <polyline points="16 6 12 2 8 6"/>
+                    <line x1="12" y1="2" x2="12" y2="15"/>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== 星象头部区域 ========== -->
+    <div class="astro-header">
+        <!-- 星空背景 -->
+        <svg class="stars-bg" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice">
+            <defs>
+                <radialGradient id="starGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+                    <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+                </radialGradient>
+            </defs>
+            <!-- 随机星星 -->
+            <circle cx="50" cy="30" r="1" fill="#fff" opacity="0.8"/>
+            <circle cx="120" cy="50" r="1.5" fill="#fff" opacity="0.6"/>
+            <circle cx="200" cy="20" r="1" fill="#fff" opacity="0.9"/>
+            <circle cx="280" cy="60" r="1.2" fill="#fff" opacity="0.7"/>
+            <circle cx="350" cy="35" r="1" fill="#fff" opacity="0.5"/>
+            <circle cx="80" cy="80" r="0.8" fill="#fff" opacity="0.6"/>
+            <circle cx="160" cy="100" r="1.3" fill="#fff" opacity="0.8"/>
+            <circle cx="240" cy="85" r="0.9" fill="#fff" opacity="0.7"/>
+            <circle cx="320" cy="110" r="1.1" fill="#fff" opacity="0.6"/>
+            <circle cx="30" cy="120" r="1" fill="#fff" opacity="0.5"/>
+            <circle cx="100" cy="140" r="1.4" fill="#fff" opacity="0.7"/>
+            <circle cx="180" cy="160" r="0.8" fill="#fff" opacity="0.6"/>
+            <circle cx="260" cy="145" r="1.2" fill="#fff" opacity="0.8"/>
+            <circle cx="340" cy="170" r="1" fill="#fff" opacity="0.5"/>
+            <circle cx="380" cy="90" r="0.7" fill="#fff" opacity="0.6"/>
+            <circle cx="60" cy="180" r="1.1" fill="#fff" opacity="0.7"/>
+            <circle cx="140" cy="200" r="0.9" fill="#fff" opacity="0.5"/>
+            <circle cx="220" cy="190" r="1.3" fill="#fff" opacity="0.6"/>
+            <circle cx="300" cy="220" r="1" fill="#fff" opacity="0.8"/>
+            <circle cx="370" cy="200" r="0.8" fill="#fff" opacity="0.7"/>
+        </svg>
+
+        <!-- 星座连线装饰 -->
+        <svg class="constellation-lines" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice">
+            <g stroke="#fff" stroke-width="0.5" fill="none" opacity="0.4">
+                <path d="M50,30 L120,50 L160,100 L100,140"/>
+                <path d="M200,20 L240,85 L220,190"/>
+                <path d="M280,60 L320,110 L300,220"/>
+                <path d="M350,35 L340,170"/>
+            </g>
+            <!-- 装饰圆环 -->
+            <circle cx="200" cy="125" r="80" stroke="#fff" stroke-width="0.3" fill="none" opacity="0.15"/>
+            <circle cx="200" cy="125" r="100" stroke="#fff" stroke-width="0.3" fill="none" opacity="0.1"/>
+        </svg>
+
+        <div class="user-info">
+            <!-- 头像光环 -->
+            <div class="user-avatar-ring">
+                <svg width="100" height="100" viewBox="0 0 100 100">
+                    <!-- 外圈 -->
+                    <circle cx="50" cy="50" r="48" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                    <!-- 旋转刻度 -->
+                    <g stroke="rgba(255,255,255,0.3)" stroke-width="1">
+                        <line x1="50" y1="2" x2="50" y2="8"/>
+                        <line x1="50" y1="92" x2="50" y2="98"/>
+                        <line x1="2" y1="50" x2="8" y2="50"/>
+                        <line x1="92" y1="50" x2="98" y2="50"/>
+                    </g>
+                    <!-- 八个方位点 -->
+                    <circle cx="50" cy="5" r="2" fill="rgba(255,255,255,0.5)"/>
+                    <circle cx="50" cy="95" r="2" fill="rgba(255,255,255,0.5)"/>
+                    <circle cx="5" cy="50" r="2" fill="rgba(255,255,255,0.5)"/>
+                    <circle cx="95" cy="50" r="2" fill="rgba(255,255,255,0.5)"/>
+                    <circle cx="15" cy="15" r="1.5" fill="rgba(255,255,255,0.3)"/>
+                    <circle cx="85" cy="15" r="1.5" fill="rgba(255,255,255,0.3)"/>
+                    <circle cx="15" cy="85" r="1.5" fill="rgba(255,255,255,0.3)"/>
+                    <circle cx="85" cy="85" r="1.5" fill="rgba(255,255,255,0.3)"/>
+                </svg>
+                <div class="avatar-inner">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5">
+                        <circle cx="12" cy="7" r="4"/>
+                        <path d="M5.5 21v-2a4 4 0 0 1 4-4h5a4 4 0 0 1 4 4v2"/>
+                    </svg>
+                </div>
+            </div>
+
+            <h1 class="user-name">李 明 远</h1>
+            <p class="user-birth">公历 1990年8月15日 巳时 · 农历庚午年七月初六</p>
+
+            <div class="user-tags">
+                <span class="user-tag">庚金日主</span>
+                <span class="user-tag">身强格局</span>
+                <span class="user-tag">食神生财</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== 八字排盘 ========== -->
+    <div class="bazi-art-section">
+        <div class="bazi-art-card">
+            <!-- 八卦装饰 -->
+            <svg class="bagua-deco" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="#000" stroke-width="2"/>
+                <circle cx="50" cy="50" r="35" fill="none" stroke="#000" stroke-width="1"/>
+                <!-- 八卦符号简化 -->
+                <g fill="#000">
+                    <rect x="48" y="5" width="4" height="12"/>
+                    <rect x="48" y="83" width="4" height="12"/>
+                    <rect x="5" y="48" width="12" height="4"/>
+                    <rect x="83" y="48" width="12" height="4"/>
+                </g>
+            </svg>
+
+            <svg class="bagua-deco-left" viewBox="0 0 100 100">
+                <path d="M50,10 A40,40 0 0,1 50,90 A20,20 0 0,1 50,50 A20,20 0 0,0 50,10" fill="#000"/>
+                <circle cx="50" cy="30" r="6" fill="#fff"/>
+                <circle cx="50" cy="70" r="6" fill="#000"/>
+            </svg>
+
+            <div class="section-header">
+                <div class="section-title">
+                    <svg class="title-icon" viewBox="0 0 28 28">
+                        <rect x="2" y="2" width="10" height="10" rx="2" fill="#000"/>
+                        <rect x="16" y="2" width="10" height="10" rx="2" fill="#666"/>
+                        <rect x="2" y="16" width="10" height="10" rx="2" fill="#666"/>
+                        <rect x="16" y="16" width="10" height="10" rx="2" fill="#000"/>
+                    </svg>
+                    四柱八字
+                </div>
+                <span class="section-badge">乾造</span>
+            </div>
+
+            <div class="pillars-art">
+                <div class="pillar-art">
+                    <div class="pillar-label-art">年 柱</div>
+                    <div class="pillar-content">
+                        <svg class="pillar-deco" viewBox="0 0 60 100">
+                            <circle cx="30" cy="20" r="15" fill="#fff"/>
+                            <circle cx="30" cy="80" r="15" fill="#fff"/>
+                        </svg>
+                        <div class="gan-art">庚</div>
+                        <div class="gan-line"></div>
+                        <div class="zhi-art">午</div>
+                        <div class="element-badge">金 · 火</div>
+                    </div>
+                </div>
+                <div class="pillar-art">
+                    <div class="pillar-label-art">月 柱</div>
+                    <div class="pillar-content">
+                        <div class="gan-art">甲</div>
+                        <div class="gan-line"></div>
+                        <div class="zhi-art">申</div>
+                        <div class="element-badge">木 · 金</div>
+                    </div>
+                </div>
+                <div class="pillar-art">
+                    <div class="pillar-label-art">日 柱</div>
+                    <div class="pillar-content day-master">
+                        <div class="gan-art">庚</div>
+                        <div class="gan-line"></div>
+                        <div class="zhi-art">辰</div>
+                        <div class="element-badge">金 · 土</div>
+                    </div>
+                </div>
+                <div class="pillar-art">
+                    <div class="pillar-label-art">时 柱</div>
+                    <div class="pillar-content">
+                        <div class="gan-art">辛</div>
+                        <div class="gan-line"></div>
+                        <div class="zhi-art">巳</div>
+                        <div class="element-badge">金 · 火</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="canggan-art">
+                <div class="canggan-col">
+                    <div class="canggan-label">藏干</div>
+                    <div class="canggan-chars">己 丁</div>
+                </div>
+                <div class="canggan-col">
+                    <div class="canggan-label">藏干</div>
+                    <div class="canggan-chars">庚 壬 戊</div>
+                </div>
+                <div class="canggan-col">
+                    <div class="canggan-label">藏干</div>
+                    <div class="canggan-chars">乙 戊 癸</div>
+                </div>
+                <div class="canggan-col">
+                    <div class="canggan-label">藏干</div>
+                    <div class="canggan-chars">丙 庚 戊</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== 五行分布 ========== -->
+    <div class="wuxing-section">
+        <div class="section-header">
+            <div class="section-title">
+                <svg class="title-icon" viewBox="0 0 28 28">
+                    <circle cx="14" cy="14" r="12" fill="none" stroke="#000" stroke-width="2"/>
+                    <circle cx="14" cy="14" r="6" fill="#000"/>
+                </svg>
+                五行能量
+            </div>
+        </div>
+
+        <div class="wuxing-ring-container">
+            <svg class="wuxing-ring" viewBox="0 0 200 200">
+                <defs>
+                    <!-- 渐变定义 -->
+                    <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#888"/>
+                        <stop offset="100%" stop-color="#ccc"/>
+                    </linearGradient>
+                </defs>
+                
+                <!-- 背景圆 -->
+                <circle cx="100" cy="100" r="90" fill="none" stroke="#f0f0f0" stroke-width="20"/>
+                
+                <!-- 五行弧线 - 根据占比绘制 -->
+                <!-- 金 5/12 = 150度 -->
+                <circle cx="100" cy="100" r="90" fill="none" stroke="#1a1a1a" stroke-width="20"
+                    stroke-dasharray="235.6 330" stroke-dashoffset="82.5" stroke-linecap="round"/>
+                <!-- 火 3/12 = 90度 -->
+                <circle cx="100" cy="100" r="90" fill="none" stroke="#555" stroke-width="20"
+                    stroke-dasharray="141.4 424.2" stroke-dashoffset="-153.1" stroke-linecap="round"/>
+                <!-- 土 2/12 = 60度 -->
+                <circle cx="100" cy="100" r="90" fill="none" stroke="#888" stroke-width="20"
+                    stroke-dasharray="94.2 471.2" stroke-dashoffset="-294.5" stroke-linecap="round"/>
+                <!-- 木 1/12 = 30度 -->
+                <circle cx="100" cy="100" r="90" fill="none" stroke="#aaa" stroke-width="20"
+                    stroke-dasharray="47.1 518.4" stroke-dashoffset="-388.7" stroke-linecap="round"/>
+                <!-- 水 1/12 = 30度 -->
+                <circle cx="100" cy="100" r="90" fill="none" stroke="#ccc" stroke-width="20"
+                    stroke-dasharray="47.1 518.4" stroke-dashoffset="-435.8" stroke-linecap="round"/>
+
+                <!-- 中心装饰 -->
+                <circle cx="100" cy="100" r="55" fill="#fff"/>
+                <circle cx="100" cy="100" r="55" fill="none" stroke="#f0f0f0" stroke-width="1"/>
+                
+                <!-- 太极图案 -->
+                <path d="M100,55 A45,45 0 0,1 100,145 A22.5,22.5 0 0,1 100,100 A22.5,22.5 0 0,0 100,55" fill="#1a1a1a"/>
+                <circle cx="100" cy="77.5" r="7" fill="#f5f5f5"/>
+                <circle cx="100" cy="122.5" r="7" fill="#1a1a1a"/>
+            </svg>
+        </div>
+
+        <div class="wuxing-labels">
+            <div class="wuxing-label-item">
+                <div class="wuxing-dot" style="background:#aaa;"></div>
+                <div class="wuxing-name">木</div>
+                <div class="wuxing-count">1</div>
+            </div>
+            <div class="wuxing-label-item">
+                <div class="wuxing-dot" style="background:#555;"></div>
+                <div class="wuxing-name">火</div>
+                <div class="wuxing-count">3</div>
+            </div>
+            <div class="wuxing-label-item">
+                <div class="wuxing-dot" style="background:#888;"></div>
+                <div class="wuxing-name">土</div>
+                <div class="wuxing-count">2</div>
+            </div>
+            <div class="wuxing-label-item">
+                <div class="wuxing-dot" style="background:#1a1a1a;"></div>
+                <div class="wuxing-name">金</div>
+                <div class="wuxing-count">5</div>
+            </div>
+            <div class="wuxing-label-item">
+                <div class="wuxing-dot" style="background:#ccc;"></div>
+                <div class="wuxing-name">水</div>
+                <div class="wuxing-count">1</div>
+            </div>
+        </div>
+
+        <div class="favor-cards">
+            <div class="favor-card like">
+                <div class="favor-label">喜用神</div>
+                <div class="favor-value">水 木</div>
+            </div>
+            <div class="favor-card dislike">
+                <div class="favor-label">忌 神</div>
+                <div class="favor-value">土 金</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== 命盘曼陀罗图 ========== -->
+    <div class="mandala-section">
+        <div class="section-header">
+            <div class="section-title">
+                <svg class="title-icon" viewBox="0 0 28 28">
+                    <polygon points="14,2 26,9 26,19 14,26 2,19 2,9" fill="none" stroke="#000" stroke-width="2"/>
+                    <circle cx="14" cy="14" r="5" fill="#000"/>
+                </svg>
+                命盘全息图
+            </div>
+        </div>
+
+        <div class="mandala-container">
+            <svg class="mandala-chart" viewBox="0 0 280 280">
+                <!-- 最外层装饰圆 -->
+                <circle cx="140" cy="140" r="135" fill="none" stroke="#e8e8e8" stroke-width="1"/>
+                <circle cx="140" cy="140" r="130" fill="none" stroke="#e8e8e8" stroke-width="0.5" stroke-dasharray="4,4"/>
+
+                <!-- 十二宫位 -->
+                <g stroke="#e0e0e0" stroke-width="1">
+                    <line x1="140" y1="10" x2="140" y2="40"/>
+                    <line x1="140" y1="240" x2="140" y2="270"/>
+                    <line x1="10" y1="140" x2="40" y2="140"/>
+                    <line x1="240" y1="140" x2="270" y2="140"/>
+                    <line x1="48" y1="48" x2="69" y2="69"/>
+                    <line x1="211" y1="211" x2="232" y2="232"/>
+                    <line x1="232" y1="48" x2="211" y2="69"/>
+                    <line x1="48" y1="232" x2="69" y2="211"/>
+                </g>
+
+                <!-- 十二地支标记 -->
+                <g font-family="var(--serif-font)" font-size="12" fill="#999" text-anchor="middle">
+                    <text x="140" y="28">子</text>
+                    <text x="140" y="262">午</text>
+                    <text x="22" y="144">卯</text>
+                    <text x="258" y="144">酉</text>
+                    <text x="55" y="55">丑</text>
+                    <text x="225" y="225">未</text>
+                    <text x="225" y="55">亥</text>
+                    <text x="55" y="225">巳</text>
+                </g>
+
+                <!-- 中间层 - 大运圈 -->
+                <circle cx="140" cy="140" r="100" fill="none" stroke="#ccc" stroke-width="1"/>
+                
+                <!-- 连接线 - 形成几何图案 -->
+                <g stroke="#ddd" stroke-width="0.5">
+                    <polygon points="140,40 240,140 140,240 40,140" fill="none"/>
+                    <polygon points="85,65 195,65 195,215 85,215" fill="none"/>
+                </g>
+
+                <!-- 内圈 - 八字位置 -->
+                <circle cx="140" cy="140" r="65" fill="none" stroke="#aaa" stroke-width="1"/>
+
+                <!-- 四柱位置标记 -->
+                <g font-family="var(--serif-font)" font-size="14" fill="#333" text-anchor="middle">
+                    <!-- 年柱 -->
+                    <circle cx="90" cy="90" r="22" fill="#f5f5f5" stroke="#ccc" stroke-width="1"/>
+                    <text x="90" y="87" font-size="13">庚</text>
+                    <text x="90" y="102" font-size="13">午</text>
+                    
+                    <!-- 月柱 -->
+                    <circle cx="190" cy="90" r="22" fill="#f5f5f5" stroke="#ccc" stroke-width="1"/>
+                    <text x="190" y="87" font-size="13">甲</text>
+                    <text x="190" y="102" font-size="13">申</text>
+                    
+                    <!-- 日柱 - 强调 -->
+                    <circle cx="140" cy="140" r="28" fill="#1a1a1a"/>
+                    <text x="140" y="137" fill="#fff" font-size="15">庚</text>
+                    <text x="140" y="154" fill="#fff" font-size="15">辰</text>
+                    
+                    <!-- 时柱 -->
+                    <circle cx="140" cy="210" r="22" fill="#f5f5f5" stroke="#ccc" stroke-width="1"/>
+                    <text x="140" y="207" font-size="13">辛</text>
+                    <text x="140" y="222" font-size="13">巳</text>
+                </g>
+
+                <!-- 装饰性小星星 -->
+                <g fill="#ddd">
+                    <circle cx="60" cy="140" r="3"/>
+                    <circle cx="220" cy="140" r="3"/>
+                    <circle cx="140" cy="60" r="3"/>
+                    <circle cx="140" cy="260" r="3"/>
+                </g>
+            </svg>
+        </div>
+    </div>
+
+    <!-- ========== 十神格局 ========== -->
+    <div class="shishen-section">
+        <div class="section-header">
+            <div class="section-title">
+                <svg class="title-icon" viewBox="0 0 28 28">
+                    <polygon points="14,2 17,11 26,11 19,17 22,26 14,21 6,26 9,17 2,11 11,11" fill="#000"/>
+                </svg>
+                十神分布
+            </div>
+        </div>
+
+        <div class="shishen-mandala">
+            <svg width="180" height="180" viewBox="0 0 180 180">
+                <!-- 外圈 -->
+                <circle cx="90" cy="90" r="85" fill="none" stroke="#e8e8e8" stroke-width="1"/>
+                <circle cx="90" cy="90" r="60" fill="none" stroke="#e8e8e8" stroke-width="1"/>
+                
+                <!-- 中心日主 -->
+                <circle cx="90" cy="90" r="28" fill="#1a1a1a"/>
+                <text x="90" y="86" font-family="var(--serif-font)" font-size="14" fill="#fff" text-anchor="middle">日主</text>
+                <text x="90" y="102" font-family="var(--serif-font)" font-size="12" fill="rgba(255,255,255,0.7)" text-anchor="middle">庚金</text>
+
+                <!-- 十神位置 -->
+                <g font-family="var(--serif-font)" font-size="11" text-anchor="middle">
+                    <!-- 比肩 -->
+                    <circle cx="90" cy="25" r="18" fill="#f0f0f0" stroke="#ddd"/>
+                    <text x="90" y="29" fill="#333">比肩</text>
+                    
+                    <!-- 劫财 -->
+                    <circle cx="152" cy="50" r="18" fill="#f0f0f0" stroke="#ddd"/>
+                    <text x="152" y="54" fill="#333">劫财</text>
+                    
+                    <!-- 食神 -->
+                    <circle cx="165" cy="110" r="18" fill="#333"/>
+                    <text x="165" y="114" fill="#fff">食神</text>
+                    
+                    <!-- 伤官 -->
+                    <circle cx="130" cy="160" r="18" fill="#f0f0f0" stroke="#ddd"/>
+                    <text x="130" y="164" fill="#333">伤官</text>
+                    
+                    <!-- 偏财 -->
+                    <circle cx="50" cy="160" r="18" fill="#333"/>
+                    <text x="50" y="164" fill="#fff">偏财</text>
+                    
+                    <!-- 正财 -->
+                    <circle cx="15" cy="110" r="18" fill="#f0f0f0" stroke="#ddd"/>
+                    <text x="15" y="114" fill="#333">正财</text>
+                    
+                    <!-- 正印 -->
+                    <circle cx="28" cy="50" r="18" fill="#f0f0f0" stroke="#ddd"/>
+                    <text x="28" y="54" fill="#333">正印</text>
+                </g>
+
+                <!-- 连接线 -->
+                <g stroke="#e0e0e0" stroke-width="0.5">
+                    <line x1="90" y1="43" x2="90" y2="62"/>
+                    <line x1="134" y1="60" x2="118" y2="72"/>
+                    <line x1="147" y1="100" x2="118" y2="95"/>
+                </g>
+            </svg>
+        </div>
+
+        <div class="shishen-grid">
+            <div class="shishen-cell highlight">
+                <span class="shishen-char">比</span>
+                <span class="shishen-label">比肩</span>
+            </div>
+            <div class="shishen-cell highlight">
+                <span class="shishen-char">劫</span>
+                <span class="shishen-label">劫财</span>
+            </div>
+            <div class="shishen-cell">
+                <span class="shishen-char">食</span>
+                <span class="shishen-label">食神</span>
+            </div>
+            <div class="shishen-cell">
+                <span class="shishen-char">伤</span>
+                <span class="shishen-label">伤官</span>
+            </div>
+            <div class="shishen-cell">
+                <span class="shishen-char">财</span>
+                <span class="shishen-label">偏财</span>
+            </div>
+            <div class="shishen-cell">
+                <span class="shishen-char">才</span>
+                <span class="shishen-label">正财</span>
+            </div>
+            <div class="shishen-cell">
+                <span class="shishen-char">杀</span>
+                <span class="shishen-label">七杀</span>
+            </div>
+            <div class="shishen-cell">
+                <span class="shishen-char">官</span>
+                <span class="shishen-label">正官</span>
+            </div>
+            <div class="shishen-cell">
+                <span class="shishen-char">枭</span>
+                <span class="shishen-label">偏印</span>
+            </div>
+            <div class="shishen-cell">
+                <span class="shishen-char">印</span>
+                <span class="shishen-label">正印</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== 大运流年 ========== -->
+    <div class="dayun-section">
+        <svg class="dayun-wave-bg" viewBox="0 0 400 80" preserveAspectRatio="none">
+            <path d="M0,40 Q50,10 100,40 T200,40 T300,40 T400,40 L400,80 L0,80 Z" fill="#000"/>
+        </svg>
+
+        <div class="section-header">
+            <div class="section-title">
+                <svg class="title-icon" viewBox="0 0 28 28">
+                    <path d="M4,14 Q10,4 14,14 T24,14" fill="none" stroke="#000" stroke-width="2"/>
+                    <circle cx="14" cy="14" r="3" fill="#000"/>
+                </svg>
+                大运流年
+            </div>
+            <span class="section-badge">起运5岁</span>
+        </div>
+
+        <div class="dayun-scroll">
+            <div class="dayun-card">
+                <div class="dayun-age">5-14岁</div>
+                <div class="dayun-ganzhi">癸未</div>
+                <div class="dayun-year">1995</div>
+            </div>
+            <div class="dayun-card">
+                <div class="dayun-age">15-24岁</div>
+                <div class="dayun-ganzhi">壬午</div>
+                <div class="dayun-year">2005</div>
+            </div>
+            <div class="dayun-card active">
+                <div class="dayun-age">25-34岁</div>
+                <div class="dayun-ganzhi">辛巳</div>
+                <div class="dayun-year">2015</div>
+            </div>
+            <div class="dayun-card">
+                <div class="dayun-age">35-44岁</div>
+                <div class="dayun-ganzhi">庚辰</div>
+                <div class="dayun-year">2025</div>
+            </div>
+            <div class="dayun-card">
+                <div class="dayun-age">45-54岁</div>
+                <div class="dayun-ganzhi">己卯</div>
+                <div class="dayun-year">2035</div>
+            </div>
+            <div class="dayun-card">
+                <div class="dayun-age">55-64岁</div>
+                <div class="dayun-ganzhi">戊寅</div>
+                <div class="dayun-year">2045</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== 命理解读 ========== -->
+    <div class="analysis-section">
+        <!-- 装饰图案 -->
+        <svg class="analysis-deco" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="90" fill="none" stroke="#000" stroke-width="1"/>
+            <circle cx="100" cy="100" r="70" fill="none" stroke="#000" stroke-width="0.5"/>
+            <circle cx="100" cy="100" r="50" fill="none" stroke="#000" stroke-width="0.5"/>
+            <polygon points="100,10 190,100 100,190 10,100" fill="none" stroke="#000" stroke-width="0.5"/>
+        </svg>
+
+        <div class="section-header">
+            <div class="section-title">
+                <svg class="title-icon" viewBox="0 0 28 28">
+                    <rect x="4" y="4" width="20" height="20" rx="3" fill="none" stroke="#000" stroke-width="2"/>
+                    <line x1="9" y1="10" x2="19" y2="10" stroke="#000" stroke-width="2"/>
+                    <line x1="9" y1="14" x2="19" y2="14" stroke="#000" stroke-width="2"/>
+                    <line x1="9" y1="18" x2="15" y2="18" stroke="#000" stroke-width="2"/>
+                </svg>
+                命理解读
+            </div>
+        </div>
+
+        <div class="analysis-item">
+            <svg class="analysis-item-deco" viewBox="0 0 100 100">
+                <path d="M50,10 L90,90 L10,90 Z" fill="none" stroke="#000" stroke-width="1"/>
+                <circle cx="50" cy="50" r="20" fill="none" stroke="#000" stroke-width="1"/>
+            </svg>
+            <div class="analysis-header">
+                <div class="analysis-icon-ring">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                    </svg>
+                </div>
+                <div class="analysis-title">性格特质</div>
+            </div>
+            <div class="analysis-content">
+                日主庚金，性格刚毅果断，做事雷厉风行。金多身强，具有很强的领导能力和执行力。八字中有食伤生财，头脑灵活，善于把握商机，具备创业的潜质。
+            </div>
+            <div class="analysis-keywords">
+                <span class="keyword-tag">果断</span>
+                <span class="keyword-tag">领导力</span>
+                <span class="keyword-tag">执行力强</span>
+                <span class="keyword-tag">商业头脑</span>
+            </div>
+        </div>
+
+        <div class="analysis-item">
+            <svg class="analysis-item-deco" viewBox="0 0 100 100">
+                <rect x="20" y="20" width="60" height="60" fill="none" stroke="#000" stroke-width="1"/>
+                <circle cx="50" cy="50" r="15" fill="none" stroke="#000" stroke-width="1"/>
+            </svg>
+            <div class="analysis-header">
+                <div class="analysis-icon-ring">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
+                        <rect x="2" y="7" width="20" height="14" rx="2"/>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                    </svg>
+                </div>
+                <div class="analysis-title">事业财运</div>
+            </div>
+            <div class="analysis-content">
+                命中财星得力，具有良好的理财能力。适合从事金融、科技、管理等领域的工作。35岁后进入庚辰大运，事业将迎来新的发展机遇，宜把握时机，稳中求进。
+            </div>
+            <div class="analysis-keywords">
+                <span class="keyword-tag">财运稳定</span>
+                <span class="keyword-tag">适合创业</span>
+                <span class="keyword-tag">中年发达</span>
+            </div>
+        </div>
+
+        <div class="analysis-item">
+            <svg class="analysis-item-deco" viewBox="0 0 100 100">
+                <circle cx="35" cy="50" r="20" fill="none" stroke="#000" stroke-width="1"/>
+                <circle cx="65" cy="50" r="20" fill="none" stroke="#000" stroke-width="1"/>
+            </svg>
+            <div class="analysis-header">
+                <div class="analysis-icon-ring">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <div class="analysis-title">感情婚姻</div>
+            </div>
+            <div class="analysis-content">
+                日支辰土为正财库，主配偶贤惠持家。感情上较为专一，婚后家庭生活稳定。建议在28-32岁之间考虑婚姻大事，此时运势配合，易遇良缘。
+            </div>
+            <div class="analysis-keywords">
+                <span class="keyword-tag">感情专一</span>
+                <span class="keyword-tag">婚姻稳定</span>
+                <span class="keyword-tag">家庭和睦</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== 底部操作 ========== -->
+    <div class="bottom-bar">
+        <div class="btn-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+            </svg>
+        </div>
+        <div class="btn-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+                <polyline points="16 6 12 2 8 6"/>
+                <line x1="12" y1="2" x2="12" y2="15"/>
+            </svg>
+        </div>
+        <button class="btn-main">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 16v-4M12 8h.01"/>
+            </svg>
+            深度解读
+        </button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

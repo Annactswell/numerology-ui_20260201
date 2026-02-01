@@ -1,0 +1,363 @@
+:root {
+    --bg-color: #fafafa;
+    --text-main: #000000;
+    --text-sub: #666666;
+    --text-hint: #999999;
+    --accent-black: #1a1a1a;
+    --gray-light: #f0f0f0;
+    --gray-medium: #e0e0e0;
+    --gray-dark: #424242;
+    --border-color: #e8e8e8;
+    --serif-font: "Songti SC", "SimSun", "Times New Roman", serif;
+    --sans-font: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--sans-font);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 430px;
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 顶部导航 */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    height: 56px;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.back-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.back-btn:hover {
+    background-color: var(--gray-light);
+}
+
+.header-title {
+    font-size: 17px;
+    font-weight: 600;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header-right {
+    width: 32px;
+}
+
+/* 主内容区 */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 24px 40px;
+}
+
+/* 页面标题区 */
+.page-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-title {
+    font-family: var(--serif-font);
+    font-size: 26px;
+    margin-bottom: 12px;
+    color: #111;
+    letter-spacing: 2px;
+}
+
+.page-subtitle {
+    font-size: 14px;
+    color: var(--text-sub);
+    line-height: 1.6;
+}
+
+/* 装饰性插画 */
+.deco-illustration {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 30px;
+}
+
+/* 表单样式 */
+.form-container {
+    flex: 1;
+}
+
+.form-section {
+    margin-bottom: 28px;
+}
+
+.form-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 12px;
+}
+
+.label-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.form-row {
+    display: flex;
+    gap: 12px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.form-group.full {
+    flex: none;
+    width: 100%;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.form-select {
+    width: 100%;
+    height: 52px;
+    padding: 0 40px 0 16px;
+    font-size: 16px;
+    border: 1.5px solid var(--gray-medium);
+    border-radius: 12px;
+    background-color: #fff;
+    color: var(--text-main);
+    appearance: none;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-family: var(--sans-font);
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: var(--accent-black);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
+}
+
+.form-select:hover {
+    border-color: #bbb;
+}
+
+.select-arrow {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--text-sub);
+}
+
+/* 时辰选择 - 网格布局 */
+.shichen-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.shichen-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 8px;
+    border: 1.5px solid var(--gray-medium);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: #fff;
+}
+
+.shichen-item:hover {
+    border-color: #bbb;
+    background-color: #fafafa;
+}
+
+.shichen-item.selected {
+    border-color: var(--accent-black);
+    background-color: var(--accent-black);
+    color: #fff;
+}
+
+.shichen-name {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.shichen-time {
+    font-size: 10px;
+    color: var(--text-hint);
+}
+
+.shichen-item.selected .shichen-time {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* 提交按钮 */
+.submit-section {
+    margin-top: auto;
+    padding-top: 30px;
+}
+
+.submit-btn {
+    width: 100%;
+    height: 54px;
+    background: linear-gradient(135deg, #2c2c2c 0%, #000 100%);
+    color: #fff;
+    border: none;
+    border-radius: 27px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.submit-btn:hover {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+.submit-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* 底部提示 */
+.footer-note {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: var(--text-hint);
+    line-height: 1.6;
+}
+
+/* 分隔线装饰 */
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 24px 0;
+}
+
+.divider-line {
+    flex: 1;
+    height: 1px;
+    background: var(--gray-medium);
+}
+
+.divider-icon {
+    padding: 0 16px;
+    color: var(--text-hint);
+}
+
+/* 性别选择 */
+.gender-group {
+    display: flex;
+    gap: 12px;
+}
+
+.gender-item {
+    flex: 1;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1.5px solid var(--gray-medium);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: #fff;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.gender-item:hover {
+    border-color: #bbb;
+}
+
+.gender-item.selected {
+    border-color: var(--accent-black);
+    background-color: var(--accent-black);
+    color: #fff;
+}
+
+.gender-icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* 输入框 */
+.form-input {
+    width: 100%;
+    height: 52px;
+    padding: 0 16px;
+    font-size: 16px;
+    border: 1.5px solid var(--gray-medium);
+    border-radius: 12px;
+    background-color: #fff;
+    color: var(--text-main);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-family: var(--sans-font);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--accent-black);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
+}
+
+.form-input::placeholder {
+    color: var(--text-hint);
+}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的 - 灵魂旅迹</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <!-- ========== 顶部 ========== -->
+    <header class="header">
+        <div class="settings-btn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            </svg>
+        </div>
+    </header>
+
+    <!-- ========== 个人信息 ========== -->
+    <section class="profile-section">
+        <!-- 装饰性太极图 -->
+        <svg class="profile-deco" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="48" fill="none" stroke="#000" stroke-width="1"/>
+            <path d="M50,2 A48,48 0 0,1 50,98 A24,24 0 0,1 50,50 A24,24 0 0,0 50,2" fill="#000"/>
+            <circle cx="50" cy="26" r="6" fill="#fff"/>
+            <circle cx="50" cy="74" r="6" fill="#000"/>
+        </svg>
+
+        <div class="avatar-row">
+            <div class="avatar">
+                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=160&h=160&fit=crop&auto=format" alt="头像">
+            </div>
+            <div class="profile-info">
+                <div class="profile-name">灵魂旅者</div>
+                <div class="profile-id">ID: 2026020188</div>
+            </div>
+        </div>
+
+        <div class="stats-row">
+            <div class="stat-item">
+                <span class="stat-value">12</span>
+                <span class="stat-label">报告</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">36</span>
+                <span class="stat-label">收藏</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">580</span>
+                <span class="stat-label">积分</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ========== 快捷入口 ========== -->
+    <section class="quick-section">
+        <div class="quick-grid">
+            <div class="quick-item">
+                <div class="quick-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                    </svg>
+                </div>
+                <span class="quick-text">订单</span>
+            </div>
+            <div class="quick-item">
+                <div class="quick-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                    </svg>
+                </div>
+                <span class="quick-text">收藏</span>
+            </div>
+            <div class="quick-item">
+                <div class="quick-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                        <line x1="1" y1="10" x2="23" y2="10"/>
+                    </svg>
+                </div>
+                <span class="quick-text">优惠券</span>
+            </div>
+            <div class="quick-item">
+                <div class="quick-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                </div>
+                <span class="quick-text">积分</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ========== 我的报告 ========== -->
+    <section class="section" style="padding-top: 28px;">
+        <div class="section-header">
+            <div class="section-title">我的报告</div>
+            <div class="section-more">全部 →</div>
+        </div>
+        <div class="report-list">
+            <div class="report-item" onclick="location.href='../result/index.html'">
+                <div class="report-icon">
+                    <svg width="28" height="28" viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="20" fill="none" stroke="#333" stroke-width="1.5"/>
+                        <path d="M24,4 A20,20 0 0,1 24,44 A10,10 0 0,1 24,24 A10,10 0 0,0 24,4" fill="#333"/>
+                        <circle cx="24" cy="14" r="2.5" fill="#fff"/>
+                        <circle cx="24" cy="34" r="2.5" fill="#333"/>
+                    </svg>
+                </div>
+                <div class="report-info">
+                    <div class="report-title">八字详批报告</div>
+                    <div class="report-meta">2026-01-28 · 甲午年 丙子月 庚寅日</div>
+                </div>
+                <svg class="report-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </div>
+            <div class="report-item" onclick="location.href='../result/index.html'">
+                <div class="report-icon">
+                    <svg width="28" height="28" viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="18" fill="none" stroke="#333" stroke-width="1.5"/>
+                        <circle cx="24" cy="24" r="6" fill="none" stroke="#333" stroke-width="1.5"/>
+                        <line x1="24" y1="6" x2="24" y2="12" stroke="#333" stroke-width="1.5"/>
+                        <line x1="24" y1="36" x2="24" y2="42" stroke="#333" stroke-width="1.5"/>
+                        <line x1="6" y1="24" x2="12" y2="24" stroke="#333" stroke-width="1.5"/>
+                        <line x1="36" y1="24" x2="42" y2="24" stroke="#333" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <div class="report-info">
+                    <div class="report-title">2026流年运势</div>
+                    <div class="report-meta">2026-01-15 · 丙午年运势解读</div>
+                </div>
+                <svg class="report-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 功能菜单 ========== -->
+    <div class="menu-list">
+        <div class="menu-item">
+            <svg class="menu-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+            <span class="menu-text">邀请好友</span>
+            <svg class="menu-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </div>
+        <div class="menu-item">
+            <svg class="menu-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+            </svg>
+            <span class="menu-text">消息通知</span>
+            <span class="menu-badge">5 条未读</span>
+            <svg class="menu-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </div>
+        <div class="menu-item">
+            <svg class="menu-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            <span class="menu-text">帮助与反馈</span>
+            <svg class="menu-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </div>
+        <div class="menu-item">
+            <svg class="menu-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            <span class="menu-text">隐私设置</span>
+            <svg class="menu-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </div>
+        <div class="menu-item">
+            <svg class="menu-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="16" x2="12" y2="12"/>
+                <line x1="12" y1="8" x2="12.01" y2="8"/>
+            </svg>
+            <span class="menu-text">关于我们</span>
+            <svg class="menu-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- ========== 底部导航 ========== -->
+    <nav class="tab-bar">
+        <div class="tab-item" onclick="location.href='../index.html'">
+            <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2C14 2 15 5 15 8C15 11 12 12 12 12C12 12 9 11 9 8C9 5 10 2 12 2Z"/>
+                <path d="M22 12C22 14 19 15 16 15C13 15 12 12 12 12C12 12 13 9 16 9C19 9 22 10 22 12Z"/>
+                <path d="M12 22C10 22 9 19 9 16C9 13 12 12 12 12C12 12 15 13 15 16C15 19 14 22 12 22Z"/>
+                <path d="M2 12C2 10 5 9 8 9C11 9 12 12 12 12C12 12 11 15 8 15C5 15 2 14 2 12Z"/>
+            </svg>
+            <span>画像</span>
+        </div>
+        <div class="tab-item" onclick="location.href='../insight/index.html'">
+            <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <circle cx="12" cy="12" r="4"/>
+            </svg>
+            <span>洞察</span>
+        </div>
+        <div class="tab-item tab-center" onclick="location.href='../consult/index.html'">
+            <div class="tab-center-btn">
+                <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+            </div>
+            <span>咨询</span>
+        </div>
+        <div class="tab-item" onclick="location.href='../shop/index.html'">
+            <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+            <span>商城</span>
+        </div>
+        <div class="tab-item active">
+            <svg class="tab-icon" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="7" r="4"/>
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            </svg>
+            <span>我的</span>
+        </div>
+    </nav>
+</div>
+
+</body>
+</html>
