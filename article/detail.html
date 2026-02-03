@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>什么是八字？ - 灵魂旅迹</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container article-detail-page">
+    <!-- ========== 顶部导航 ========== -->
+    <header class="header header-transparent">
+        <div class="header-left" onclick="history.back()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </div>
+        <div class="header-right">
+            <div class="icon-btn">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="12" cy="12" r="1"/>
+                    <circle cx="19" cy="12" r="1"/>
+                    <circle cx="5" cy="12" r="1"/>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== 文章封面 ========== -->
+    <div class="article-hero">
+        <svg class="hero-art" viewBox="0 0 400 300">
+            <!-- 背景渐变 -->
+            <defs>
+                <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#f5f5f5"/>
+                    <stop offset="100%" style="stop-color:#e8e8e8"/>
+                </linearGradient>
+            </defs>
+            <rect width="400" height="300" fill="url(#bgGrad)"/>
+            
+            <!-- 山水意境 -->
+            <path d="M0 220 Q50 180 100 200 Q150 220 200 190 Q250 160 300 180 Q350 200 400 170 L400 300 L0 300 Z" fill="#ddd" opacity="0.5"/>
+            <path d="M0 240 Q80 210 160 230 Q240 250 320 220 Q380 200 400 210 L400 300 L0 300 Z" fill="#ccc" opacity="0.4"/>
+            
+            <!-- 中央太极图 -->
+            <g transform="translate(200, 130)">
+                <circle cx="0" cy="0" r="70" fill="none" stroke="#333" stroke-width="1.5"/>
+                <path d="M0,-70 A70,70 0 0,1 0,70 A35,35 0 0,1 0,0 A35,35 0 0,0 0,-70" fill="#333"/>
+                <circle cx="0" cy="-35" r="10" fill="#fff"/>
+                <circle cx="0" cy="35" r="10" fill="#333"/>
+            </g>
+            
+            <!-- 装饰云纹 -->
+            <path d="M50 80 Q60 70 75 75 Q90 80 85 90 Q80 100 65 95 Q50 90 50 80" fill="none" stroke="#333" stroke-width="0.8" opacity="0.3"/>
+            <path d="M320 60 Q330 50 345 55 Q360 60 355 70 Q350 80 335 75 Q320 70 320 60" fill="none" stroke="#333" stroke-width="0.8" opacity="0.3"/>
+        </svg>
+    </div>
+
+    <!-- ========== 文章内容 ========== -->
+    <main class="article-content">
+        <div class="article-header">
+            <span class="article-category">八字入门</span>
+            <h1 class="article-title">什么是八字？<br>一文读懂生辰八字的奥秘</h1>
+            <div class="article-meta-row">
+                <div class="author-info">
+                    <div class="author-avatar">
+                        <svg viewBox="0 0 32 32">
+                            <circle cx="16" cy="16" r="15" fill="#f5f5f5" stroke="#333" stroke-width="0.8"/>
+                            <circle cx="16" cy="13" r="5" fill="none" stroke="#333" stroke-width="0.8"/>
+                            <path d="M6 28c0-6 4.5-9 10-9s10 3 10 9" fill="none" stroke="#333" stroke-width="0.8"/>
+                        </svg>
+                    </div>
+                    <div class="author-text">
+                        <span class="author-name">玄真子</span>
+                        <span class="article-date">2026.01.20</span>
+                    </div>
+                </div>
+                <div class="reading-time">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    <span>5 分钟阅读</span>
+                </div>
+            </div>
+        </div>
+
+        <article class="prose">
+            <p class="lead">八字，又称生辰八字、四柱八字，是中国传统命理学的核心概念。它通过一个人出生的年、月、日、时，用天干地支组合成四柱，每柱两字，共八个字，故称"八字"。</p>
+
+            <div class="quote-block">
+                <svg class="quote-icon" viewBox="0 0 24 24">
+                    <path d="M10 11H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v7c0 2.21-1.79 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M19 11h-4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v7c0 2.21-1.79 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+                <p>命由天定，运由己造。八字是天地之气在人身上的印记，它揭示了一个人的先天禀赋与命运走向。</p>
+            </div>
+
+            <h2>一、八字的构成</h2>
+
+            <p>八字由四柱组成，分别是：</p>
+
+            <div class="bazi-example">
+                <div class="pillar">
+                    <div class="pillar-label">年柱</div>
+                    <div class="pillar-char tiangan">甲</div>
+                    <div class="pillar-char dizhi">午</div>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-label">月柱</div>
+                    <div class="pillar-char tiangan">丙</div>
+                    <div class="pillar-char dizhi">子</div>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-label">日柱</div>
+                    <div class="pillar-char tiangan daymaster">庚</div>
+                    <div class="pillar-char dizhi">寅</div>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-label">时柱</div>
+                    <div class="pillar-char tiangan">戊</div>
+                    <div class="pillar-char dizhi">辰</div>
+                </div>
+            </div>
+
+            <ul class="styled-list">
+                <li><strong>年柱</strong> — 代表祖上、父母宫，反映早年运势</li>
+                <li><strong>月柱</strong> — 代表父母、兄弟宫，反映青年运势</li>
+                <li><strong>日柱</strong> — 代表自己、配偶宫，是命主本人</li>
+                <li><strong>时柱</strong> — 代表子女宫，反映晚年运势</li>
+            </ul>
+
+            <h2>二、天干与地支</h2>
+
+            <p>天干有十个，象征天之气：</p>
+
+            <div class="element-grid">
+                <div class="element-item wood">
+                    <span class="element-char">甲</span>
+                    <span class="element-char">乙</span>
+                    <span class="element-name">木</span>
+                </div>
+                <div class="element-item fire">
+                    <span class="element-char">丙</span>
+                    <span class="element-char">丁</span>
+                    <span class="element-name">火</span>
+                </div>
+                <div class="element-item earth">
+                    <span class="element-char">戊</span>
+                    <span class="element-char">己</span>
+                    <span class="element-name">土</span>
+                </div>
+                <div class="element-item metal">
+                    <span class="element-char">庚</span>
+                    <span class="element-char">辛</span>
+                    <span class="element-name">金</span>
+                </div>
+                <div class="element-item water">
+                    <span class="element-char">壬</span>
+                    <span class="element-char">癸</span>
+                    <span class="element-name">水</span>
+                </div>
+            </div>
+
+            <p>地支有十二个，象征地之气：<strong>子、丑、寅、卯、辰、巳、午、未、申、酉、戌、亥</strong>。它们与十二生肖一一对应，也各有五行属性。</p>
+
+            <h2>三、如何解读八字</h2>
+
+            <p>八字命理的核心在于分析五行的生克制化。通过观察八字中五行的强弱、旺衰、喜忌，可以推断出一个人的：</p>
+
+            <div class="info-cards">
+                <div class="info-card">
+                    <svg viewBox="0 0 40 40">
+                        <circle cx="20" cy="20" r="18" fill="none" stroke="#333" stroke-width="1"/>
+                        <path d="M20 8 L20 20 L28 26" fill="none" stroke="#333" stroke-width="1.5"/>
+                    </svg>
+                    <span>性格特征</span>
+                </div>
+                <div class="info-card">
+                    <svg viewBox="0 0 40 40">
+                        <path d="M20 5 C25 5 35 15 35 25 C35 35 20 40 20 40 C20 40 5 35 5 25 C5 15 15 5 20 5Z" fill="none" stroke="#333" stroke-width="1"/>
+                    </svg>
+                    <span>事业财运</span>
+                </div>
+                <div class="info-card">
+                    <svg viewBox="0 0 40 40">
+                        <path d="M20 10 C23 10 28 14 28 20 C28 28 20 32 20 32 C20 32 12 28 12 20 C12 14 17 10 20 10Z" fill="none" stroke="#333" stroke-width="1"/>
+                        <path d="M20 32 C17 32 12 28 12 22 C12 14 20 10 20 10 C20 10 28 14 28 22 C28 28 23 32 20 32Z" fill="none" stroke="#333" stroke-width="1"/>
+                    </svg>
+                    <span>婚姻感情</span>
+                </div>
+                <div class="info-card">
+                    <svg viewBox="0 0 40 40">
+                        <rect x="8" y="8" width="24" height="24" rx="3" fill="none" stroke="#333" stroke-width="1"/>
+                        <line x1="8" y1="14" x2="32" y2="14" stroke="#333" stroke-width="1"/>
+                        <line x1="14" y1="8" x2="14" y2="14" stroke="#333" stroke-width="1"/>
+                        <line x1="26" y1="8" x2="26" y2="14" stroke="#333" stroke-width="1"/>
+                    </svg>
+                    <span>健康状况</span>
+                </div>
+            </div>
+
+            <h2>四、学习建议</h2>
+
+            <p>初学八字，建议从以下几个方面入手：</p>
+
+            <ol class="styled-list numbered">
+                <li>熟记天干地支的五行属性</li>
+                <li>理解五行相生相克的关系</li>
+                <li>学会排盘和找出日主（日干）</li>
+                <li>分析八字的旺衰强弱</li>
+                <li>确定用神和喜忌</li>
+            </ol>
+
+            <div class="callout">
+                <svg class="callout-icon" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                    <line x1="12" y1="8" x2="12" y2="12" stroke="currentColor" stroke-width="1.5"/>
+                    <circle cx="12" cy="16" r="1" fill="currentColor"/>
+                </svg>
+                <div class="callout-content">
+                    <strong>提示</strong>
+                    <p>八字命理博大精深，本文仅作入门介绍。如需深入学习，建议系统研读经典著作，或请教专业命理师。</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- ========== 文章底部 ========== -->
+        <div class="article-footer">
+            <div class="article-tags">
+                <span class="tag">#八字</span>
+                <span class="tag">#命理入门</span>
+                <span class="tag">#四柱</span>
+                <span class="tag">#五行</span>
+            </div>
+            
+            <div class="article-actions">
+                <div class="action-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                    </svg>
+                    <span>1.2万</span>
+                </div>
+                <div class="action-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                    </svg>
+                    <span>86</span>
+                </div>
+                <div class="action-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+                        <polyline points="16 6 12 2 8 6"/>
+                        <line x1="12" y1="2" x2="12" y2="15"/>
+                    </svg>
+                    <span>分享</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== 相关推荐 ========== -->
+        <section class="related-section">
+            <div class="section-header">
+                <div class="section-title">相关推荐</div>
+            </div>
+            <div class="related-list">
+                <div class="related-item" onclick="location.href='detail.html?id=2'">
+                    <div class="related-thumb">
+                        <svg viewBox="0 0 60 60">
+                            <circle cx="30" cy="30" r="25" fill="none" stroke="#333" stroke-width="1"/>
+                            <polygon points="30,8 35,22 50,22 38,32 42,47 30,38 18,47 22,32 10,22 25,22" fill="none" stroke="#333" stroke-width="1"/>
+                        </svg>
+                    </div>
+                    <div class="related-info">
+                        <h4>五行相生相克：金木水火土的奥秘</h4>
+                        <span>4 分钟阅读</span>
+                    </div>
+                </div>
+                <div class="related-item" onclick="location.href='detail.html?id=3'">
+                    <div class="related-thumb">
+                        <svg viewBox="0 0 60 60">
+                            <rect x="10" y="10" width="40" height="40" rx="4" fill="none" stroke="#333" stroke-width="1"/>
+                            <line x1="10" y1="25" x2="50" y2="25" stroke="#333" stroke-width="1"/>
+                            <line x1="30" y1="25" x2="30" y2="50" stroke="#333" stroke-width="1"/>
+                        </svg>
+                    </div>
+                    <div class="related-info">
+                        <h4>十神详解：认识命盘中的十种神煞</h4>
+                        <span>6 分钟阅读</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+</body>
+</html>
