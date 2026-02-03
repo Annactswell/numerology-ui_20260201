@@ -240,6 +240,79 @@
     </nav>
 </div>
 
+<!-- ========== 新年旺运壁纸弹窗 ========== -->
+<div class="popup-overlay" id="wallpaperPopup">
+    <div class="popup-card">
+        <!-- 装饰性太极图 -->
+        <svg class="popup-deco" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="48" fill="none" stroke="#000" stroke-width="1"/>
+            <path d="M50,2 A48,48 0 0,1 50,98 A24,24 0 0,1 50,50 A24,24 0 0,0 50,2" fill="#000"/>
+            <circle cx="50" cy="26" r="6" fill="#fff"/>
+            <circle cx="50" cy="74" r="6" fill="#000"/>
+        </svg>
+        
+        <button class="popup-close" onclick="closeWallpaperPopup()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+        </button>
+        
+        <div class="popup-header">
+            <span class="popup-tag">新春限定</span>
+            <h2 class="popup-title">新年旺运壁纸</h2>
+            <p class="popup-desc">根据您的八字命盘，生成专属开运壁纸<br>助您蛇年行大运</p>
+        </div>
+        
+        <div class="popup-preview">
+            <div class="preview-item">
+                <div class="preview-phone">
+                    <div class="preview-screen" style="background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1a 100%);">
+                        <svg viewBox="0 0 60 60">
+                            <circle cx="30" cy="30" r="20" fill="none" stroke="#fff" stroke-width="0.5"/>
+                            <path d="M30,10 A20,20 0 0,1 30,50 A10,10 0 0,1 30,30 A10,10 0 0,0 30,10" fill="#fff"/>
+                        </svg>
+                    </div>
+                </div>
+                <span>财运款</span>
+            </div>
+            <div class="preview-item">
+                <div class="preview-phone">
+                    <div class="preview-screen" style="background: linear-gradient(135deg, #2d132c 0%, #4a1942 100%);">
+                        <svg viewBox="0 0 60 60">
+                            <path d="M30 15 C35 15 42 22 42 30 C42 42 30 50 30 50 C30 50 18 42 18 30 C18 22 25 15 30 15Z" fill="none" stroke="#fff" stroke-width="0.8"/>
+                        </svg>
+                    </div>
+                </div>
+                <span>桃花款</span>
+            </div>
+            <div class="preview-item">
+                <div class="preview-phone">
+                    <div class="preview-screen" style="background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);">
+                        <svg viewBox="0 0 60 60">
+                            <polygon points="30,12 35,24 48,24 38,32 42,45 30,37 18,45 22,32 12,24 25,24" fill="none" stroke="#fff" stroke-width="0.8"/>
+                        </svg>
+                    </div>
+                </div>
+                <span>事业款</span>
+            </div>
+        </div>
+        
+        <div class="popup-bottom">
+            <div class="popup-price">
+                <span class="price-current">¥19.9</span>
+                <span class="price-original">¥49.9</span>
+            </div>
+            <button class="popup-btn" onclick="location.href='wallpaper/index.html'">
+                立即获取
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+
 <script>
 // 检查登录状态
 (function() {
@@ -255,6 +328,52 @@
     //     location.href = '../onboarding/index.html';
     // }
 })();
+
+// 新年旺运壁纸弹窗逻辑
+(function() {
+    const POPUP_KEY = 'wallpaperPopupShown';
+    const POPUP_EXPIRE_DAYS = 1; // 每天显示一次
+    
+    function shouldShowPopup() {
+        const lastShown = localStorage.getItem(POPUP_KEY);
+        if (!lastShown) return true;
+        
+        const lastDate = new Date(parseInt(lastShown));
+        const now = new Date();
+        const diffHours = (now - lastDate) / (1000 * 60 * 60);
+        
+        return diffHours >= 24;
+    }
+    
+    function showPopup() {
+        const popup = document.getElementById('wallpaperPopup');
+        if (popup) {
+            popup.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            localStorage.setItem(POPUP_KEY, Date.now().toString());
+        }
+    }
+    
+    // 页面加载后延迟显示弹窗
+    if (shouldShowPopup()) {
+        setTimeout(showPopup, 1500);
+    }
+})();
+
+function closeWallpaperPopup() {
+    const popup = document.getElementById('wallpaperPopup');
+    if (popup) {
+        popup.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+// 点击遮罩层关闭弹窗
+document.getElementById('wallpaperPopup').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeWallpaperPopup();
+    }
+});
 </script>
 
 </body>
